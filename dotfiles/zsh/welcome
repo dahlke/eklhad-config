@@ -1,0 +1,6 @@
+date
+
+if [ -x /usr/bin/keychain ]; then
+    keychain ~/.ssh/id_rsa
+    . ~/.keychain/$HOSTNAME-sh
+fi

@@ -1,0 +1,61 @@
+# Window Hints
+config windowHintsShowIcons true
+config windowHintsFontName  Helvetica Neue
+bind f:shift,cmd hint HJKLYUIOPASDFGQWERT
+
+# Aliasing
+alias push_left   push  left  bar-resize:screenSizeX/2
+alias push_down   push  down  bar-resize:screenSizeY/2
+alias push_up     push  up    bar-resize:screenSizeY/2
+alias push_right  push  right bar-resize:screenSizeX/2
+
+alias half_left   push  left  bar-resize:windowSizeX/2
+alias half_down   push  down  bar-resize:windowSizeY/2
+alias half_up     push  up    bar-resize:windowSizeY/2
+alias half_right  push  right bar-resize:windowSizeX/2
+
+alias double_left   push  right bar-resize:windowSizeX*2
+alias double_down   push  up    bar-resize:windowSizeY*2
+alias double_up     push  down  bar-resize:windowSizeY*2
+alias double_right  push  left  bar-resize:windowSizeX*2
+
+alias fullscreen  move  screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias throw_right throw right
+alias throw_left  throw left
+alias throw_1     throw 0
+alias throw_2     throw 1
+alias throw_3     throw 2
+
+# Pushing
+bind h:shift,cmd ${push_left}
+bind j:shift,cmd ${push_down}
+bind k:shift,cmd ${push_up}
+bind l:shift,cmd ${push_right}
+
+bind h:shift,ctrl ${half_left}
+bind j:shift,ctrl ${half_down}
+bind k:shift,ctrl ${half_up}
+bind l:shift,ctrl ${half_right}
+
+bind h:shift,alt ${double_left}
+bind j:shift,alt ${double_down}
+bind k:shift,alt ${double_up}
+bind l:shift,alt ${double_right}
+
+# Throwing
+bind 1:shift;cmd ${throw_1}
+bind 2:shift;cmd ${throw_2}
+bind 3:shift;cmd ${throw_3}
+bind h:ctrl;shift;cmd ${throw_left}
+bind l:ctrl;shift;cmd ${throw_right}
+
+# Fullscreen
+bind m:shift;cmd ${fullscreen}
+
+# Layouts
+layout home 'iTerm' ${throw_2} | ${fullscreen}
+layout home 'Google Chrome' ${throw_1} | ${fullscreen}
+
+# Relaunch
+bind z:shift,cmd relaunch
+bind 1:ctrl,shift,cmd layout home

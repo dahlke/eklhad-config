@@ -1,0 +1,16 @@
+[user]
+    name = Neil Dahlke
+    email = neil@dahlke.us
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[pager]
+    color = true
+[core]
+    excludesfile = <%= ENV['HOME'] %>/.gitignore
+    pager = less -FXRS -x4
+[merge]
+    defaultToUpstream = true
+[rerere]
+    enabled = true
