@@ -1,5 +1,0 @@
-#clusters = hal
-hal = master agg-1 leaf-[1-2]
-
-#clusters = ec2
-ec2 = ec2-m ec2-l1 ec2-l2
