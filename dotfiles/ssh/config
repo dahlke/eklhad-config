@@ -1,5 +1,0 @@
-# Dahlke
-Host dahlke.io
-User ubuntu
-HostName ec2-34-213-138-16.us-west-2.compute.amazonaws.com
-IdentityFile ~/.ssh/dahlke-io-aws.pem
