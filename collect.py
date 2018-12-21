@@ -2,36 +2,31 @@
 from shutil import copy
 import os
 
-PREFIX_MACOS = "/Users"
-PREFIX_LINUX = "/home"
-PREFIX_DEST = "config"
-
-KNOWN_USERNAMES = ["neil", "dahlke", "eklhad"]
-OPERATING_SYSTEMS = ["macos", "linux"]
+PREFIX_DEST = "collected"
 
 FILES = [
     {
         "src": "~/.gitignore",
-        "dst": "./config/gitignore"
+        "dst": "./%s/gitignore"
     },
     {
         "src": "~/.ssh/config",
-        "dst": "./config/ssh/config"
+        "dst": "./%s/ssh/config"
     },
     {
         "src": "~/.zshrc",
-        "dst": "./config/zshrc"
+        "dst": "./%s/zshrc"
     },
     {
         "src": "~/.vimrc",
-        "dst": "./config/vimrc"
+        "dst": "./%s/vimrc"
     }
 ]
 
 if __name__ == "__main__":
     for file in FILES:
         src = os.path.abspath(os.path.expanduser(file['src']))
-        dst = os.path.abspath(os.path.expanduser(file['dst']))
+        dst = os.path.abspath(os.path.expanduser(file['dst'])) % PREFIX_DEST
         dst_dir = os.path.dirname(dst)
 
         if not os.path.exists(dst_dir):
