@@ -1,0 +1,25 @@
+# MacOS files
+.DS_Store
+
+# SVN files
+.svn
+
+# Vim files
+*.swp
+
+# Compiled files
+*.rbc
+*.pyc
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# Directories
+.terraform/
+
+# SSH Keys
+*.pem
+
+# Directories
+.terraform/
+secrets/

@@ -1,0 +1,61 @@
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="agnoster"
+
+plugins=(git)
+
+# Source ZSH Config
+. $ZSH/oh-my-zsh.sh
+. $HOME/.zsh/config
+
+# Source NVM
+. ~/.nvm/nvm.sh
+
+# my .bashrc contents
+export EDITOR=vim
+
+export GOPATH=$HOME/ndisk/src/go
+export PATH=$HOME/src/arcanist/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=$GOPATH/bin:$PATH
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# unix
+alias ls='ls -Ghv'
+alias ll='ls -l'
+alias l.='ls -Ad .*'
+alias la='ls -A'
+alias grep='grep --color -s'
+alias df='df -h'
+alias sr='screen -r'
+
+# git
+alias gil='git log --graph --abbrev-commit --stat -C --decorate --date=local'
+alias gils='git log --graph --abbrev-commit --pretty=oneline -C --decorate --date=local'
+alias gis='git status'
+alias gid='git diff -C --date=local'
+alias giw='git show -C --date=local --decorate'
+alias gic='git checkout'
+alias gipl='git pull'
+alias gips='git push'
+alias gim='git merge'
+alias gib='git branch'
+alias gir='git rebase -i'
+alias gish='git stash'
+
+# HAL
+alias hal='ssh hal'
+alias memsql='mysql -u root -h 0 --prompt="memsql> "'
+alias memhal='mysql -u root -h hal.memcompute.com --prompt="memsql> "'
+
+# Common
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias python='python3'
+alias pip='pip3'
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# HashiCorp Vault
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /Users/neil/Desktop/hashi/vault vault
+export VAULT_ADDR='http://127.0.0.1:8200'
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
