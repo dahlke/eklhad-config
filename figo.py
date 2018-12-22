@@ -11,6 +11,7 @@ def collect(files):
     for f in files:
         if not os.path.exists(f['dst_dir']):
             os.mkdir(f['dst_dir'])
+        # TODO: compare files and allow confirmation
         copy(f['src_abs_path'], f['dst_abs_path'])
         print(f['src_abs_path'], 'copied to', f['dst_abs_path'])
 
