@@ -1,0 +1,20 @@
+{
+    "files": [
+        {
+            "src": "~/.gitignore",
+            "dst": "./%s/gitignore"
+        },
+        {
+            "src": "~/.ssh/config",
+            "dst": "./%s/ssh/config"
+        },
+        {
+            "src": "~/.zshrc",
+            "dst": "./%s/zshrc"
+        },
+        {
+            "src": "~/.vimrc",
+            "dst": "./%s/vimrc"
+        }
+    ]
+}
