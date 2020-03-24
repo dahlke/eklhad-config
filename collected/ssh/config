@@ -1,5 +1,14 @@
-# Dahlke
-Host dahlke.io
-User ubuntu
-HostName ec2-34-213-138-16.us-west-2.compute.amazonaws.com
-IdentityFile ~/.ssh/dahlke-io-aws.pem
+Host aws-test
+     HostName ec2-52-55-55-35.compute-1.amazonaws.com
+     User ubuntu
+     IdentityFile ~/.ssh/neil-aws-test.pem
+
+Host rpi1
+     HostName 10.0.1.27
+     User ubuntu
+     IdentityFile ~/.ssh/rpi/rpi.pem
+
+Host rpi2
+     HostName 10.0.1.28
+     User ubuntu
+     IdentityFile ~/.ssh/rpi/rpi.pem
