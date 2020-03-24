@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# VSCode allow press and hold of keys for Vim usage
+# VSCode
+
+### Allow press and hold of keys for Vim usage
+```
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```
 
 # Install brew packages
 
@@ -16,6 +20,7 @@ brew install autojump
 brew install azure-cli
 brew install jq
 brew install kubernetes-cli
+brew install minikube
 brew install go
 brew install python
 brew install socat
