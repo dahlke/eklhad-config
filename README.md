@@ -11,18 +11,21 @@ To collect all of the files you need, use the `figo.py` script, which will colle
 $ ./figo.py --collect
 ```
 
-### Common `brew` packages
+### My base `brew` packages
+
+```
 autojump
-azure-cli		
-jq		
-kubernetes-cli		
-go		
+azure-cli
+jq
+kubernetes-cli
+go
 python
 socat
 the_silver_searcher
 vim
 watch
 wget
+```
 
 
 ## Non-Automated Configuration
