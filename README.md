@@ -11,6 +11,7 @@ $ ./figo.py --collect
 ```
 
 ### TODO: MacOS System
+- envchain
 - MacOS Keyboard Preferences
 - MacOS Mouse Preferences
 - MacOS Display Preferences
