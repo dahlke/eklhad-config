@@ -10,7 +10,7 @@ To collect all of the files you need, use the `figo.py` script, which will colle
 $ ./figo.py --collect
 ```
 
-# `envchain` Required Setup
+### `envchain` Required Setup
 ```
 envchain --set aws_hashi AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
 envchain --set aws_eklhad AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
@@ -26,7 +26,7 @@ envchain --set tfc_eklhad TFC_HOSTNAME TFC_TOKEN
 envchain --set cloudflare_eklhad CLOUDFLARE_EMAIL CLOUDFLARE_TOKEN CLOUDFLARE_API_KEY
 ```
 
-# `envchain` Example Usage
+### `envchain` Example Usage
 ```
 # List all namespaces
 envchain --list | sort | uniq -c
