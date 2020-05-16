@@ -28,6 +28,7 @@ brew install the_silver_searcher
 brew install vim
 brew install watch
 brew install wget
+brew install envchain
 ```
 
 # Mac App Downloads
