@@ -20,9 +20,9 @@ envchain --set sendgrid_eklhad SMTP_HOST SMTP_PORT SMTP_USERNAME SMTP_PASSWORD
 envchain --set github_eklhad GITHUB_TOKEN GITHUB_SECRET
 envchain --set twilio_eklhad TWILIO_ACCOUNT_SID TWILIO_AUTH_TOKEN
 envchain --set codecov_eklhad CODECOV_TOKEN
-envchain --set tfc_hashi TFC_HOSTNAME TFC_TOKEN
-envchain --set tfe_hashi TFC_HOSTNAME TFC_TOKEN
-envchain --set tfc_eklhad TFC_HOSTNAME TFC_TOKEN
+envchain --set tfc_hashi TFC_URL TFC_TOKEN
+envchain --set tfe_hashi TFC_URL TFC_TOKEN
+envchain --set tfc_eklhad TFC_URL TFC_TOKEN
 envchain --set cloudflare_eklhad CLOUDFLARE_EMAIL CLOUDFLARE_TOKEN CLOUDFLARE_API_KEY
 ```
 
