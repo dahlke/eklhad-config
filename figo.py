@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/local/bin/python3
 from shutil import copy
 import argparse
 import json
 import os
 
-PREFIX_DEST = "collected"
+COLLLECTED_PREFIX_DST = "collected"
 FILE_CONFIG_PATH = "config/files.json"
 
 def collect(files):
@@ -22,8 +22,8 @@ def collect(files):
 
 def apply(files):
     for f in files:
-        if not os.path.exists(f['dst']):
-            pass
+        if not os.path.exists(f["src_abs_path"]):
+            os.makedirs(f["src_abs_path"], exist_ok=True)
         copy(f['dst_abs_path'], f['src_abs_path'])
         print(f['dst_abs_path'], 'copied to', f['src_abs_path'])
 
@@ -36,7 +36,7 @@ def main():
 
         for f in files:
             src = os.path.abspath(os.path.expanduser(f['src']))
-            dst = os.path.abspath(os.path.expanduser(f['dst'])) % PREFIX_DEST
+            dst = os.path.abspath(os.path.expanduser(f['dst'])) % COLLLECTED_PREFIX_DST
             dst_dir = os.path.dirname(dst)
 
             f['src_abs_path'] = src

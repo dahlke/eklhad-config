@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# Install `zsh`
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+
+# Install Vundle for vim
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# open `vim`, then run :BundleInstall
+```
+
+# TODO install all the vundle plugins
+
 # VSCode
 
 ### Allow press and hold of keys for Vim usage
@@ -31,9 +46,24 @@ brew install wget
 brew install envchain
 ```
 
-# Mac App Downloads
+# Mac Downloads
 
 ```
+# Homebrew
+open https://brew.sh/
+
+# iTerm2
+open https://www.iterm2.com/downloads.html
+
+# Google Chrome
+open https://www.google.com/chrome/
+
+# VS Code
+open https://code.visualstudio.com/download
+
+# Sublime Text 3
+https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg
+
 # Docker for Mac
 open https://docs.docker.com/docker-for-mac/install/
 
@@ -75,4 +105,22 @@ open https://apps.apple.com/us/app/1password-7-password-manager/id1333542190?mt=
 
 # 24 Hour Wallpaper
 open https://apps.apple.com/us/app/24-hour-wallpaper/id1226087575?mt=12
+
+# Spotify
+open https://www.spotify.com/us/download/other/
 ```
+
+# Required Logins
+- iCloud
+- Chrome
+- Google (all accounts)
+- 1Password
+- GitHub
+- Keybase
+
+# Required Config
+- Magnet (set shortcuts)
+- macOS System Prefs (night mode, scroll)
+- macOS bottom bar
+- TODO: any prefs from config script
+- everything `envchain`
