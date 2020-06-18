@@ -1,35 +1,7 @@
 #!/bin/bash
 
-# Install `zsh`
-```
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-
-# Install Vundle for vim
-```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-# open `vim`, then run :BundleInstall
-```
-
-# TODO install all the vundle plugins
-
-# VSCode
-
-### Allow press and hold of keys for Vim usage
-```
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-```
-
-# Install brew packages
-
-### Update `brew`
-```
-brew update
-```
-
 ### Common `brew` packages
+
 ```
 brew install autojump
 brew install azure-cli
@@ -44,6 +16,45 @@ brew install vim
 brew install watch
 brew install wget
 brew install envchain
+brew install jenv
+```
+
+# `zsh`
+
+```
+# Install
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Set as default
+chsh -s /usr/local/bin/zsh
+
+# Create expected files
+mkdir ~/.zsh
+touch ~/.zsh/config
+```
+
+# Install Vundle for vim
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim 
+# :BundleInstall
+```
+
+# VSCode
+
+### Allow VSCode vim to yank to clipboard, open the VSCode extension preferences and click
+`useSystemClipboard`.
+
+### Allow press and hold of keys for Vim usage
+```
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool true
+```
+
+# Install brew packages
+
+### Update `brew`
+```
+brew update
 ```
 
 # Mac Downloads
@@ -108,6 +119,12 @@ open https://apps.apple.com/us/app/24-hour-wallpaper/id1226087575?mt=12
 
 # Spotify
 open https://www.spotify.com/us/download/other/
+```
+
+
+# Install Java Versions
+```
+jenv doctor
 ```
 
 # Required Logins

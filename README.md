@@ -40,12 +40,13 @@ $ ./figo.py --apply
 - Configure common apps
     - iTerm
         - iTerm -> General -> Preferences -> Load Preferences from (“`/.iterm”)
-            - Open eklhad-config, install the MacOs apps
+            - Open `eklhad-config`, install the MacOS apps
     - vim
         - `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-        - TODO: Vundle install
-    - zsh (set as default shell)
-        - `chsh -s /usr/local/bin/zsh`
+        - `vim`
+        - `:BundleInstall`
+    - zsh 
+- Clone any repos I need from GitHub at this stage
 
 ### HashiCorp Tools
 ```
@@ -58,7 +59,6 @@ https://www.vagrantup.com/downloads.html
 ```
 
 ### TODO: VS Code extensions
-
 
 ### `envchain` Required Setup
 ```
@@ -106,8 +106,6 @@ envchain --set --require-passphrase aws_hashi
 ```
 # Remaining items
 
-- mkdir ~/.zsh
-- touch ~/.zsh/config
 - Does 1P have a CLI?
 - Update Zshrc in eklhad-config
 - VSCode extensions auto install
@@ -118,4 +116,6 @@ envchain --set --require-passphrase aws_hashi
     - Change iStat Menus to https://bjango.com/mac/istatmenus/ since it wasn’ bought through the App Store
 - Env chain environment variables
     - Make sure they sync across devices
+- Update desktop icon size / clustering settings
+- CMD + SHIFT + . to show dotfiles
 ```
