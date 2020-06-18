@@ -57,7 +57,7 @@ vim
 
 # VSCode
 
-##Allow VSCode `vim` to yank to clipboard, 
+## Allow VSCode `vim` to yank to clipboard, 
 
 ```
 code .
@@ -67,7 +67,8 @@ code .
 ## Allow press and hold in VSCode since I use the `vim` extension.
 
 ```
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool true
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+# TODO: why is it escaping on paste
 ```
 
 # Mac Application Downloads
@@ -129,6 +130,46 @@ open https://apps.apple.com/us/app/24-hour-wallpaper/id1226087575?mt=12
 
 # Spotify
 open https://www.spotify.com/us/download/other/
+
+# Vagrant
+open https://www.vagrantup.com/downloads.html
+```
+
+# HashiCorp Tools
+
+```
+export TERRAFORM_VERSION="0.12.26"
+export VAULT_VERSION="1.4.2"
+export CONSUL_VERSION="1.7.4"
+export NOMAD_VERSION="0.11.3"
+export PACKER_VERSION="1.6.0"
+
+cd ~/Downloads
+
+wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_darwin_amd64.zip
+unzip terraform_${TERRAFORM_VERSION}_darwin_amd64.zip
+sudo mv terraform /usr/local/bin/terraform
+rm terraform_${TERRAFORM_VERSION}_darwin_amd64.zip
+
+wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_darwin_amd64.zip
+unzip vault_${VAULT_VERSION}_darwin_amd64.zip
+sudo mv vault /usr/local/bin/vault
+rm vault_${VAULT_VERSION}_darwin_amd64.zip
+
+wget https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_darwin_amd64.zip
+unzip consul_${CONSUL_VERSION}_darwin_amd64.zip
+sudo mv consul /usr/local/bin/consul
+rm consul_${CONSUL_VERSION}_darwin_amd64.zip
+
+wget https://releases.hashicorp.com/nomad/${NOMAD_VERSION}/nomad_${NOMAD_VERSION}_darwin_amd64.zip
+unzip nomad_${NOMAD_VERSION}_darwin_amd64.zip
+sudo mv nomad /usr/local/bin/nomad
+rm nomad_${NOMAD_VERSION}_darwin_amd64.zip
+
+wget https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_darwin_amd64.zip
+unzip packer_${PACKER_VERSION}_darwin_amd64.zip
+sudo mv packer /usr/local/bin/packer
+rm packer_${PACKER_VERSION}_darwin_amd64.zip
 ```
 
 # Install Java Versions
