@@ -106,21 +106,16 @@ envchain --set --require-passphrase aws_hashi
 ```
 # Remaining items
 
-* Random
-    * Alias python3 to python 
-    * Does 1P have a CLI?
-    * cat << EOF >> ~/.zshrc
-        * # Add Visual Studio Code (code)
-        * export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-        * EOF
-    * https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
-* Install Golang
-* Install Java
-* Figure out which apps I can use brew with (MacDown for ex)
-* Set GOPATH / .zsrhc file
-* Review the order of all the steps
-    * Change iStat Menus to https://bjango.com/mac/istatmenus/ since it wasn’ bought through the App Store
-* Env chain environment variables
-    * Make sure they sync across devices
-
+- mkdir ~/.zsh
+- touch ~/.zsh/config
+- Does 1P have a CLI?
+- Update Zshrc in eklhad-config
+- VSCode extensions auto install
+- Change copy buffer in VSCode to be shared.
+- Install java / jenv
+- Figure out which apps I can use brew with (MacDown for ex)
+- Review the order of all the steps
+    - Change iStat Menus to https://bjango.com/mac/istatmenus/ since it wasn’ bought through the App Store
+- Env chain environment variables
+    - Make sure they sync across devices
 ```

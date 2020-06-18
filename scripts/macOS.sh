@@ -121,6 +121,7 @@ open https://www.spotify.com/us/download/other/
 # Required Config
 - Magnet (set shortcuts)
 - macOS System Prefs (night mode, scroll)
-- macOS bottom bar
+- macOS dock
+- macOS top bar
 - TODO: any prefs from config script
 - everything `envchain`
