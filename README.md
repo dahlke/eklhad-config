@@ -46,6 +46,10 @@ $ ./figo.py --apply
         - `vim`
         - `:BundleInstall`
     - zsh 
+    - iState Menus
+    - Keybase
+    - Any other downloaded app
+- Install Hashi tools
 - Clone any repos I need from GitHub at this stage
 
 ### HashiCorp Tools
@@ -100,6 +104,7 @@ envchain --set --require-passphrase aws_hashi
 - VSCode Config
 - .azure/ profile contents
 - .gcp/ profile contents
+- Configure iState Menus
 
 
 
@@ -109,7 +114,6 @@ envchain --set --require-passphrase aws_hashi
 - Does 1P have a CLI?
 - Update Zshrc in eklhad-config
 - VSCode extensions auto install
-- Change copy buffer in VSCode to be shared.
 - Install java / jenv
 - Figure out which apps I can use brew with (MacDown for ex)
 - Review the order of all the steps
@@ -118,4 +122,5 @@ envchain --set --require-passphrase aws_hashi
     - Make sure they sync across devices
 - Update desktop icon size / clustering settings
 - CMD + SHIFT + . to show dotfiles
+- gitconfig author / email etc
 ```

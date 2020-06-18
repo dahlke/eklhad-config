@@ -1,6 +1,19 @@
 #!/bin/bash
 
-### Common `brew` packages
+# `brew`
+
+## Install `brew`
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+## Update `brew`
+```
+brew update
+```
+
+## Install commonly used `brew` packages
 
 ```
 brew install autojump
@@ -21,19 +34,21 @@ brew install jenv
 
 # `zsh`
 
+## Install `zsh`
 ```
-# Install
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
-# Set as default
+## Set `zsh` as default shell, create expected files.
+```
 chsh -s /usr/local/bin/zsh
-
-# Create expected files
 mkdir ~/.zsh
 touch ~/.zsh/config
 ```
 
-# Install Vundle for vim
+# `vim`
+
+## Install Vundle and Vundle packages for `vim`
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim 
@@ -42,27 +57,22 @@ vim
 
 # VSCode
 
-### Allow VSCode vim to yank to clipboard, open the VSCode extension preferences and click
-`useSystemClipboard`.
+##Allow VSCode `vim` to yank to clipboard, 
 
-### Allow press and hold of keys for Vim usage
+```
+code .
+# extension preferences and click `useSystemClipboard`.
+```
+
+## Allow press and hold in VSCode since I use the `vim` extension.
+
 ```
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool true
 ```
 
-# Install brew packages
-
-### Update `brew`
-```
-brew update
-```
-
-# Mac Downloads
+# Mac Application Downloads
 
 ```
-# Homebrew
-open https://brew.sh/
-
 # iTerm2
 open https://www.iterm2.com/downloads.html
 
@@ -84,8 +94,8 @@ open https://www.gimp.org/downloads/
 # Keybase
 open https://keybase.io/docs/the_app/install_macos
 
-# iStat Menus
-open https://apps.apple.com/us/app/istat-menus/id1319778037?mt=12
+# iStat Menus (license key in email)
+open https://bjango.com/mac/istatmenus/
 
 # Evernote
 open https://apps.apple.com/us/app/evernote/id406056744?mt=12
@@ -121,13 +131,13 @@ open https://apps.apple.com/us/app/24-hour-wallpaper/id1226087575?mt=12
 open https://www.spotify.com/us/download/other/
 ```
 
-
 # Install Java Versions
+
 ```
 jenv doctor
 ```
 
-# Required Logins
+# Required Logins (Other apps need login, but these will help smooth out the provisioning experience)
 - iCloud
 - Chrome
 - Google (all accounts)
@@ -136,9 +146,5 @@ jenv doctor
 - Keybase
 
 # Required Config
-- Magnet (set shortcuts)
-- macOS System Prefs (night mode, scroll)
-- macOS dock
-- macOS top bar
 - TODO: any prefs from config script
 - everything `envchain`
