@@ -170,13 +170,38 @@ wget https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VER
 unzip packer_${PACKER_VERSION}_darwin_amd64.zip
 sudo mv packer /usr/local/bin/packer
 rm packer_${PACKER_VERSION}_darwin_amd64.zip
+
+terraform version
+vault version
+consul version
+nomad version
+packer version
 ```
 
 # Install Java Versions
 
+Fix any existing issues.
 ```
 jenv doctor
 ```
+
+## Install the latest Java version from Oracle
+
+```
+# Open the page, download whatever is the latest. 
+open https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+
+# List everything installed
+ls /Library/Java/JavaVirtualMachines/
+
+# Make sure the macOS system version of java is in your jenv shims
+jdk-14.0.1.jdk
+
+# Add the latest one just installed
+jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/
+```
+
+
 
 # Required Logins (Other apps need login, but these will help smooth out the provisioning experience)
 - iCloud

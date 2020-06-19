@@ -123,4 +123,5 @@ envchain --set --require-passphrase aws_hashi
 - Update desktop icon size / clustering settings
 - CMD + SHIFT + . to show dotfiles
 - gitconfig author / email etc
+- Any global pip, npm deps I missed
 ```
