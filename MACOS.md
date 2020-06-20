@@ -262,16 +262,56 @@ TODO: integrate this with 1Password.
 
 ```
 eval $(op signin my)
+op list items --vault "API Tokens"
+op get item aws_eklhad
+op get item aws_hashi
+
+op get item Amazon 
+
+# Set personal AWS creds from 1Password
+AWS_ACCESS_KEY_ID=$(op get item Amazon | jq -r '.details.sections[1].fields[1].n')
+AWS_SECRET_ACCESS_KEY=$(op get item Amazon | jq -r '.details.sections[1].fields[0].n')
+echo "AWS_ACCESS_KEY_ID:" $AWS_ACCESS_KEY_ID
+echo "AWS_SECRET_ACCESS_KEY:" $AWS_SECRET_ACCESS_KEY
 envchain --set aws_eklhad AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
+
+# Set personal Cloudflare creds from 1Password
+echo $CLOUDFLARE_EMAIL
+echo $CLOUDFLARE_TOKEN
+echo $CLOUDFLARE_API_KEY
 envchain --set cloudflare_eklhad CLOUDFLARE_EMAIL CLOUDFLARE_TOKEN CLOUDFLARE_API_KEY
+
+# Set personal CodeCov creds from 1Password
+CODECOV_TOKEN=$(op get item CodeCov | jq -r '.details.sections[1].fields[0].n')
+echo $CODECOV_TOKEN
 envchain --set codecov_eklhad CODECOV_TOKEN
+
+# Set personal Sendgrid creds from 1Password
+echo $SMTP_HOST
+echo $SMTP_PORT
+echo $SMTP_USERNAME
+echo $SMTP_PASSWORD
 envchain --set sendgrid_eklhad SMTP_HOST SMTP_PORT SMTP_USERNAME SMTP_PASSWORD
+
+# Set personal Cloudflare creds from 1Password
+echo $GITHUB_TOKEN
+echo $GITHUB_SECRET
 envchain --set github_eklhad GITHUB_TOKEN GITHUB_SECRET
+
+# Set personal Cloudflare creds from 1Password
+TWILIO_ACCOUNT_SID=$(op get item Twilio | jq -r '.details.sections[1].fields[0].n')
+TWILIO_AUTH_TOKEN=$(op get item Twilio | jq -r '.details.sections[1].fields[1].n')
+echo $TWILIO_ACCOUNT_SID
+echo $TWILIO_AUTH_TOKEN
 envchain --set twilio_eklhad TWILIO_ACCOUNT_SID TWILIO_AUTH_TOKEN
+
+# Set personal Cloudflare creds from 1Password
+TFC_URL="https://app.terraform.io"
+echo $TFC_TOKEN
 envchain --set tfc_eklhad TFC_URL TFC_TOKEN
 
+# Set Hashi Creds
 envchain --set aws_hashi AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
-
 envchain --set ali_hashi ALICLOUD_ACCESS_KEY ALICLOUD_SECRET_KEY
 envchain --set tfc_hashi TFC_URL TFC_TOKEN
 envchain --set tfe_hashi TFC_URL TFC_TOKEN
@@ -322,3 +362,4 @@ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/
 - gitconfig author / email etc
 - Any global pip, npm deps I missed
 - iStats Menus
+- https://www.chaseadams.io/posts/show-your-hard-drive-on-your-desktop-macos/#:~:text=Show%20Macintosh%20HD%20on%20Desktop&text=If%20%E2%80%9CGeneral%E2%80%9D%20isn't,icon%20for%20your%20Macintosh%20HD.
