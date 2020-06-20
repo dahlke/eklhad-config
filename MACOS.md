@@ -2,7 +2,7 @@
 
 ## Log Into iCloud
 
-TODO
+This is the first step since it will help with syncing all of the settings that I allow it to sync. 
 
 ## Install Developer Tools
 
@@ -283,7 +283,7 @@ open https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
 # List everything installed
 ls /Library/Java/JavaVirtualMachines/
 
-# Make sure the macOS system version of java is in your jenv shims, example:
+# Make sure the macOS system version of java is in my jenv shims, example:
 jdk-14.0.1.jdk
 
 # Add the latest one just installed
