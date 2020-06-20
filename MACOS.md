@@ -82,7 +82,16 @@ open https://zoom.us/download
 
 ## Log Into 1Password
 
-Both work and personal vaults. This will make logging into things much easier.
+Log into the 1Password UI, both work and personal vaults. This will make logging into things much easier. Also set up the 1Password CLI. 
+
+```
+op signin my.1password.com neil.dahlke@gmail.com
+eval $(op signin my)
+
+op signin hashicorp.1password.com neil@hashicorp.com
+eval $(op signin hashicorp)
+
+```
 
 TODO: set up the CLI.
 
@@ -132,6 +141,7 @@ brew update
 ### Install commonly used `brew` packages
 
 ```
+brew cask install 1password
 brew install autojump
 brew install azure-cli
 brew install envchain
@@ -251,18 +261,21 @@ packer version
 TODO: integrate this with 1Password.
 
 ```
-envchain --set aws_hashi AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
+eval $(op signin my)
 envchain --set aws_eklhad AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
-envchain --set ali_hashi ALICLOUD_ACCESS_KEY ALICLOUD_SECRET_KEY
-envchain --set local_vault VAULT_ADDR VAULT_TOKEN
+envchain --set cloudflare_eklhad CLOUDFLARE_EMAIL CLOUDFLARE_TOKEN CLOUDFLARE_API_KEY
+envchain --set codecov_eklhad CODECOV_TOKEN
 envchain --set sendgrid_eklhad SMTP_HOST SMTP_PORT SMTP_USERNAME SMTP_PASSWORD
 envchain --set github_eklhad GITHUB_TOKEN GITHUB_SECRET
 envchain --set twilio_eklhad TWILIO_ACCOUNT_SID TWILIO_AUTH_TOKEN
-envchain --set codecov_eklhad CODECOV_TOKEN
+envchain --set tfc_eklhad TFC_URL TFC_TOKEN
+
+envchain --set aws_hashi AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
+
+envchain --set ali_hashi ALICLOUD_ACCESS_KEY ALICLOUD_SECRET_KEY
 envchain --set tfc_hashi TFC_URL TFC_TOKEN
 envchain --set tfe_hashi TFC_URL TFC_TOKEN
-envchain --set tfc_eklhad TFC_URL TFC_TOKEN
-envchain --set cloudflare_eklhad CLOUDFLARE_EMAIL CLOUDFLARE_TOKEN CLOUDFLARE_API_KEY
+envchain --set local_vault VAULT_ADDR VAULT_TOKEN
 ```
 
 ## Other
