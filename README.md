@@ -13,5 +13,3 @@ To apply all the files on the other side, use the apply command.
 ```
 $ ./figo.py --apply
 ```
-
-

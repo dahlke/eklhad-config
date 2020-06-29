@@ -362,4 +362,10 @@ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/
 - gitconfig author / email etc
 - Any global pip, npm deps I missed
 - iStats Menus
+- MacOS Keyboard, enable tab through prompts. 
+- Screen shots of System Prefs
 - https://www.chaseadams.io/posts/show-your-hard-drive-on-your-desktop-macos/#:~:text=Show%20Macintosh%20HD%20on%20Desktop&text=If%20%E2%80%9CGeneral%E2%80%9D%20isn't,icon%20for%20your%20Macintosh%20HD.
+
+$ npm install -g npm-check-updates
+$ npm-check-updates -u
+$ npm install
