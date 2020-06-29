@@ -121,3 +121,11 @@ function killport() { lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs ki
 alias -s md=code
 alias -s json=code
 alias -s {cs,js,html}=code
+
+########
+# Java (yuck) helpers
+########
+#
+## jenv management
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
