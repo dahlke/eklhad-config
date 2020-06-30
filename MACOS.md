@@ -1,4 +1,4 @@
-# Provisioning a New macOS Machine Steps
+# Provisioning a macOS Machine (To My Preferences) Steps
 
 ## Log Into iCloud
 
@@ -255,22 +255,27 @@ nomad version
 packer version
 ```
 
-### `envchain` Required Setup
+## `envchain` Required Setup
 
-TODO: integrate this with 1Password.
+### Personal Vault
+
+#### Log into 1Password Personal Vault
 
 ```
-# Log into 1 Password
 eval $(op signin my)
+```
 
-# Set personal AWS creds from 1Password
+#### Set Personal AWS Creds
+```
 AWS_ACCESS_KEY_ID=$(op get item Amazon | jq -r '.details.sections[1].fields[1].v')
 AWS_SECRET_ACCESS_KEY=$(op get item Amazon | jq -r '.details.sections[1].fields[0].v')
 echo "AWS_ACCESS_KEY_ID:" $AWS_ACCESS_KEY_ID
 echo "AWS_SECRET_ACCESS_KEY:" $AWS_SECRET_ACCESS_KEY
 envchain --set aws_eklhad AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
+```
 
-# Set personal Cloudflare creds from 1Password
+#### Set Personal Cloudflare Creds
+```
 CLOUDFLARE_TOKEN=$(op get item Cloudflare | jq -r '.details.sections[1].fields[0].v')
 CLOUDFLARE_EMAIL=$(op get item Cloudflare | jq -r '.details.sections[1].fields[1].v')
 CLOUDFLARE_API_KEY=$(op get item Cloudflare | jq -r '.details.sections[1].fields[2].v')
@@ -278,13 +283,17 @@ echo "CLOUDFLARE_TOKEN:" $CLOUDFLARE_TOKEN
 echo "CLOUDFLARE_EMAIL:" $CLOUDFLARE_EMAIL
 echo "CLOUDFLARE_API_KEY:" $CLOUDFLARE_API_KEY
 envchain --set cloudflare_eklhad CLOUDFLARE_EMAIL CLOUDFLARE_TOKEN CLOUDFLARE_API_KEY
+```
 
-# Set personal CodeCov creds from 1Password
+#### Set Personal CodeCov Creds
+```
 CODECOV_TOKEN=$(op get item CodeCov | jq -r '.details.sections[1].fields[0].n')
 echo "CODECOV_TOKEN:" $CODECOV_TOKEN
 envchain --set codecov_eklhad CODECOV_TOKEN
+```
 
-# Set personal Sendgrid creds from 1Password
+#### Set Personal Sendgrid (SMTP) Creds
+```
 SMTP_HOST=$(op get item Sendgrid | jq -r '.details.sections[1].fields[0].v')
 SMTP_PORT=$(op get item Sendgrid | jq -r '.details.sections[1].fields[1].v')
 SMTP_USERNAME=$(op get item Sendgrid | jq -r '.details.sections[1].fields[2].v')
@@ -294,33 +303,91 @@ echo "SMTP_PORT:" $SMTP_PORT
 echo "SMTP_USERNAME:" $SMTP_USERNAME
 echo "SMTP_PASSWORD:" $SMTP_PASSWORD
 envchain --set sendgrid_eklhad SMTP_HOST SMTP_PORT SMTP_USERNAME SMTP_PASSWORD
+```
 
-# Set personal Cloudflare creds from 1Password
+#### Set Personal GitHub Creds
+```
 GITHUB_TOKEN=$(op get item GitHub | jq -r '.details.sections[1].fields[0].v')
 GITHUB_SECRET=$(op get item GitHub | jq -r '.details.sections[1].fields[1].v')
 echo "GITHUB_TOKEN:" $GITHUB_TOKEN
 echo "GITHUB_SECRET:" $GITHUB_SECRET
 envchain --set github_eklhad GITHUB_TOKEN GITHUB_SECRET
+```
 
-# Set personal Cloudflare creds from 1Password
+#### Set Personal Twilio Creds
+```
 TWILIO_ACCOUNT_SID=$(op get item Twilio | jq -r '.details.sections[1].fields[0].v')
 TWILIO_AUTH_TOKEN=$(op get item Twilio | jq -r '.details.sections[1].fields[1].v')
 echo "TWILIO_ACCOUNT_SID:" $TWILIO_ACCOUNT_SID
 echo "TWILIO_AUTH_TOKEN:" $TWILIO_AUTH_TOKEN
 envchain --set twilio_eklhad TWILIO_ACCOUNT_SID TWILIO_AUTH_TOKEN
+```
 
-# Set personal Cloudflare creds from 1Password
+#### Set Personal Terraform Cloud Creds
+```
 TFC_URL="https://app.terraform.io"
 TFC_TOKEN=$(op get item "Terraform Cloud" | jq -r '.details.sections[1].fields[0].v')
 echo "TFC_URL:" $TFC_URL
 echo "TFC_TOKEN:" $TFC_TOKEN
 envchain --set tfc_eklhad TFC_URL TFC_TOKEN
+```
 
-# Set Hashi Creds
+### TODO: Work Vault
+
+#### Log into 1Password Work Vault
+```
+eval $(op signin hashicorp)
+```
+
+#### Set Work AWS Creds
+```
+AWS_ACCESS_KEY_ID=$(op get item Amazon | jq -r '.details.sections[1].fields[0].v')
+AWS_SECRET_ACCESS_KEY=$(op get item Amazon | jq -r '.details.sections[1].fields[1].v')
+echo "AWS_ACCESS_KEY_ID:" $AWS_ACCESS_KEY_ID
+echo "AWS_SECRET_ACCESS_KEY:" $AWS_SECRET_ACCESS_KEY
 envchain --set aws_hashi AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
+```
+
+#### Set Work Alibaba Cloud Creds
+
+```
+# TODO
 envchain --set ali_hashi ALICLOUD_ACCESS_KEY ALICLOUD_SECRET_KEY
+```
+
+#### Set Work Azure Creds
+```
+# TODO
 envchain --set tfc_hashi TFC_URL TFC_TOKEN
+```
+
+#### Set Work GCP Creds
+```
+# TODO
+envchain --set tfc_hashi TFC_URL TFC_TOKEN
+```
+
+#### Set Work TFC Creds
+```
+# TODO
+envchain --set tfc_hashi TFC_URL TFC_TOKEN
+```
+
+#### Set Work TFE Creds
+```
+# TODO
 envchain --set tfe_hashi TFC_URL TFC_TOKEN
+```
+
+#### Set Work Shared Vault Creds
+```
+# TODO
+envchain --set cam_vault VAULT_ADDR VAULT_TOKEN
+```
+
+#### Set Work Local Vault Creds
+```
+# TODO
 envchain --set local_vault VAULT_ADDR VAULT_TOKEN
 ```
 
