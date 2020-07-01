@@ -141,6 +141,7 @@ brew update
 
 ```
 brew cask install 1password
+brew install aliyun-cli
 brew install autojump
 brew install azure-cli
 brew install envchain
@@ -195,16 +196,60 @@ code .
 
 ```
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-# TODO: why is it escaping on paste
 ```
 
-TODO: install all VSCode extensions
+### Install VSCode Extensions
+```
+# Docker
+open https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+
+# ESLint
+open https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
+# Go
+open https://code.visualstudio.com/docs/languages/go
+
+# HCL
+open https://marketplace.visualstudio.com/items?itemName=wholroyd.HCL
+
+# Kubernetes
+open https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools
+
+# MarkdownLint
+open https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
+
+# MySQl
+open https://marketplace.visualstudio.com/items?itemName=formulahendry.vscode-mysql
+
+# Python 
+open https://marketplace.visualstudio.com/items?itemName=ms-python.python
+
+# Terraform
+open https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform
+
+# vim
+open https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+```
 
 ## `eklhad-config`
 
 Clone the `eklhad-config` repo into the correct repo. Will be needed to apply some more preferences.
 
 TODO: move this up and outline what it will do. 
+
+
+## MacOS System Preferences
+
+```
+# TODO:
+- Show Mac HD on desktop
+- Add src directory to finder side bar.
+- MacOS Keyboard,
+- Screen shots of System Prefs
+- MacOS Keyboard Preferences,  enable tab through prompts for example. Swapping command keys for keyboard.
+- MacOS Mouse Preferences
+- MacOS Display Preferences
+```
 
 
 ## iTerm2
@@ -380,12 +425,14 @@ envchain --set tfe_hashi TFC_URL TFC_TOKEN
 ```
 
 #### Set Work Shared Vault Creds
+
 ```
 # TODO
 envchain --set cam_vault VAULT_ADDR VAULT_TOKEN
 ```
 
 #### Set Work Local Vault Creds
+
 ```
 # TODO
 envchain --set local_vault VAULT_ADDR VAULT_TOKEN
@@ -393,50 +440,27 @@ envchain --set local_vault VAULT_ADDR VAULT_TOKEN
 
 ## Other
 
-### `java`
+### `jenv`
 
-Fix any existing issues.
+Fix any existing issues. Useful for any Java work that comes up.
+
 ```
 jenv doctor
 ```
 
-#### Install the latest Java version from Oracle
-
-```
-# Open the page, download whatever is the latest. 
-open https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
-
-# List everything installed
-ls /Library/Java/JavaVirtualMachines/
-
-# Make sure the macOS system version of java is in my jenv shims, example:
-jdk-14.0.1.jdk
-
-# Add the latest one just installed
-jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/
-```
-
-
 ### TODO
-- MacOS Frequent Apps
-- MacOS Keyboard Preferences
-- MacOS Mouse Preferences
-- MacOS Display Preferences
 - VSCode Config
 - .azure/ profile contents
 - .gcp/ profile contents
-- Configure iState Menus
-- Update Zshrc in eklhad-config
+- Configure iStats Menus
 - VSCode extensions auto install
-- Install java / jenv
+- Steam
 - Figure out which apps I can use brew with (MacDown for ex)
 - Update desktop icon size / clustering settings
 - CMD + SHIFT + . to show dotfiles
 - gitconfig author / email etc
 - Any global pip, npm deps I missed
 - iStats Menus
-- MacOS Keyboard, enable tab through prompts. 
-- Screen shots of System Prefs
 - https://www.chaseadams.io/posts/show-your-hard-drive-on-your-desktop-macos/#:~:text=Show%20Macintosh%20HD%20on%20Desktop&text=If%20%E2%80%9CGeneral%E2%80%9D%20isn't,icon%20for%20your%20Macintosh%20HD.
 
 $ npm install -g npm-check-updates
