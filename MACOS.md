@@ -188,6 +188,9 @@ vim
 
 ## VSCode
 
+- [Turn on Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)
+  - Manage -> Turn on Preferences Sync
+
 - Allow `vim` to yank to clipboard
   - File -> Preferences -> Extensions -> Click "useSystemClipboard"
 - Remove Trailing Whitespace on Save
