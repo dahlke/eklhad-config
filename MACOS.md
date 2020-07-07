@@ -34,6 +34,9 @@ open https://www.gimp.org/downloads/
 # Google Chrome
 open https://www.google.com/chrome/
 
+# Instruqt CLI
+open https://github.com/instruqt/cli/releases
+
 # iStat Menus (license key in email)
 open https://bjango.com/mac/istatmenus/
 
