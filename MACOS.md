@@ -13,12 +13,6 @@ xcode-select --install
 ## Install Commonly Used Mac Apps
 
 ```bash
-# 1Password
-open https://apps.apple.com/us/app/1password-7-password-manager/id1333542190?mt=12
-
-# 1Password CLI
-open https://app-updates.agilebits.com/product_history/CLI
-
 # 24 Hour Wallpaper
 open https://apps.apple.com/us/app/24-hour-wallpaper/id1226087575?mt=12
 
@@ -28,62 +22,14 @@ open https://docs.docker.com/docker-for-mac/install/
 # Evernote
 open https://apps.apple.com/us/app/evernote/id406056744?mt=12
 
-# Gimp
-open https://www.gimp.org/downloads/
-
-# Google Chrome
-open https://www.google.com/chrome/
-
 # Instruqt CLI
 open https://github.com/instruqt/cli/releases
-
-# iStat Menus (license key in email)
-open https://bjango.com/mac/istatmenus/
-
-# iTerm2
-open https://www.iterm2.com/downloads.html
-
-# Keybase
-open https://keybase.io/docs/the_app/install_macos
-
-# MacDown
-open https://macdown.uranusjr.com/
 
 # Magnet
 open https://apps.apple.com/us/app/magnet/id441258766?mt=12
 
-# NordVPN
-open https://apps.apple.com/us/app/nordvpn-ike-unlimited-vpn/id1116599239?mt=12
-
-# pgAdmin 4
-open https://www.pgadmin.org/download/pgadmin-4-macos/
-
-# Postman
-open https://www.postman.com/downloads/
-
-# Slack
-open https://apps.apple.com/us/app/slack/id803453959?mt=12
-
-# Spotify
-open https://www.spotify.com/us/download/other/
-
-# Steam
-open https://store.steampowered.com/macos
-
-# Sublime Text 3
-https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg
-
-# Vagrant
-open https://www.vagrantup.com/downloads.html
-
-# VirtualBox
-open https://www.virtualbox.org/wiki/Downloads
-
 # VS Code
 open https://code.visualstudio.com/download
-
-# Zoom
-open https://zoom.us/download
 ```
 
 ## Log Into 1Password
@@ -139,28 +85,50 @@ git clone git@github.com:dahlke/eklhad-config.git
 brew update
 ```
 
-### Install commonly used `brew` packages
+### Install as many commonly used apps via `brew` as I can
 
 ```bash
 brew cask install 1password
+brew cask install 1password-cli
 brew install aliyun-cli
 brew install autojump
 brew install azure-cli
 brew install envchain
+brew cask install evernote
+brew cask install gimp
 brew install go
+brew cask install google-chrome
+brew cask install istat-menus
+brew cask install iterm2
 brew install jenv
 brew install jq
+brew cask install keybase
 brew install kubernetes-cli
 brew install maven
+brew cask install macdown
 brew install minikube
 brew install node
+brew cask install nordvpn
+brew cask install postman
+brew cask install pgadmin4
 brew install python
+brew cask install slack
 brew install socat
+brew cask install spotify
+brew cask install steam
+brew cask install sublime-text
 brew install the_silver_searcher
 brew install watch
 brew install wget
+brew cask install vagrant
 brew install vim
+brew cask install virtualbox
 brew install yarn
+brew cask install zoomus
+
+brew cleanup --force
+rm -f -r /Library/Caches/Homebrew/*
+
 ```
 
 ## `zsh`
