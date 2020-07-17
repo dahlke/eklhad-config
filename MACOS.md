@@ -119,6 +119,7 @@ brew cask install steam
 brew cask install sublime-text
 brew install the_silver_searcher
 brew install watch
+brew install watchman
 brew install wget
 brew cask install vagrant
 brew install vim
@@ -385,18 +386,12 @@ envchain --set tfc_eklhad TFC_URL TFC_TOKEN
 export $(envchain tfc_eklhad env | grep TFC_)
 ```
 
-#### Set Personal Azure Creds
-
-```bash
-# TODO
-envchain --set azure_eklhad ARM_CLIENT_ID ARM_CLIENT_SECRET ARM_SUBSCRIPTION_ID ARM_TENANT_ID
-```
-
 #### Set Personal GCP Creds
 
 ```bash
-# TODO
-envchain --set gcp_eklhad GOOGLE_CREDENTIALS
+GOOGLE_CLOUD_KEYFILE_JSON=$(op get item "Google dahlke.io" | jq -r '.details.sections[1].fields[0].v')
+echo "GOOGLE_CLOUD_KEYFILE_JSON:" $GOOGLE_CLOUD_KEYFILE_JSON
+envchain --set gcp_eklhad GOOGLE_CLOUD_KEYFILE_JSON
 ```
 
 ### Work Vault
@@ -435,12 +430,14 @@ aliyun configure
 ```bash
 # TODO
 envchain --set azure_hashi ARM_CLIENT_ID ARM_CLIENT_SECRET ARM_SUBSCRIPTION_ID ARM_TENANT_ID
+az login
 ```
 
 #### Set Work GCP Creds
 
 ```bash
 # TODO
+# https://console.cloud.google.com/apis/credentials?project=eklhad-web&organizationId=620944270908
 envchain --set gcp_hashi GOOGLE_CREDENTIALS
 ```
 
