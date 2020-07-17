@@ -111,6 +111,7 @@ brew install node
 brew cask install nordvpn
 brew cask install postman
 brew cask install pgadmin4
+brew install postgresql
 brew install python
 brew cask install slack
 brew install socat
