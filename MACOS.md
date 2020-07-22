@@ -98,6 +98,7 @@ brew cask install evernote
 brew cask install gimp
 brew install go
 brew cask install google-chrome
+brew install graphviz
 brew cask install istat-menus
 brew cask install iterm2
 brew install jenv
@@ -390,9 +391,16 @@ export $(envchain tfc_eklhad env | grep TFC_)
 #### Set Personal GCP Creds
 
 ```bash
-GOOGLE_CLOUD_KEYFILE_JSON=$(op get item "Google dahlke.io" | jq -r '.details.sections[1].fields[0].v')
-echo "GOOGLE_CLOUD_KEYFILE_JSON:" $GOOGLE_CLOUD_KEYFILE_JSON
-envchain --set gcp_eklhad GOOGLE_CLOUD_KEYFILE_JSON
+# https://console.cloud.google.com/apis/credentials/serviceaccountkey?project=eklhad-web&folder&organizationId=620944270908
+# TODO: Be sure to replace the newline with an escaped newline before adding to 1password.
+# NOTE: Be sure to replace the newline with an escaped newline before adding to 1password.
+GCP_CREDS_FS_DIR=~/.gcp
+GCP_CREDS_FS_PATH=$GCP_CREDS_FS_DIR/eklhad.json
+export GOOGLE_CLOUD_KEYFILE_JSON=$(op get item "Google dahlke.io" | jq -r '.details.sections[1].fields[0].v')
+echo $GOOGLE_CLOUD_KEYFILE_JSON | jq -r . > $GCP_CREDS_FS_PATH
+echo "GOOGLE_APPLICATION_CREDENTIALS:" $GCP_CREDS_FS_PATH
+
+envchain --set gcp_eklhad GOOGLE_APPLICATION_CREDENTIALS
 ```
 
 ### Work Vault
