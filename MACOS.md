@@ -93,7 +93,6 @@ brew cask install 1password-cli
 brew install aliyun-cli
 brew install autojump
 brew install azure-cli
-brew install envchain
 brew cask install evernote
 brew cask install gimp
 brew install go
@@ -297,7 +296,7 @@ nomad version
 packer version
 ```
 
-## `envchain` Required Setup
+## Credentials 
 
 ### Personal Vault
 
@@ -310,82 +309,52 @@ eval $(op signin my)
 #### Set Personal AWS Creds
 
 ```bash
-AWS_ACCESS_KEY_ID=$(op get item Amazon | jq -r '.details.sections[1].fields[1].v')
-AWS_SECRET_ACCESS_KEY=$(op get item Amazon | jq -r '.details.sections[1].fields[0].v')
-echo "AWS_ACCESS_KEY_ID:" $AWS_ACCESS_KEY_ID
-echo "AWS_SECRET_ACCESS_KEY:" $AWS_SECRET_ACCESS_KEY
-envchain --set aws_eklhad AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
-export $(envchain aws_eklhad env | grep AWS_)
+export AWS_ACCESS_KEY_ID=$(op get item Amazon | jq -r '.details.sections[1].fields[1].v')
+export AWS_SECRET_ACCESS_KEY=$(op get item Amazon | jq -r '.details.sections[1].fields[0].v')
 ```
 
 #### Set Personal Cloudflare Creds
 
 ```bash
-CLOUDFLARE_TOKEN=$(op get item Cloudflare | jq -r '.details.sections[1].fields[0].v')
-CLOUDFLARE_EMAIL=$(op get item Cloudflare | jq -r '.details.sections[1].fields[1].v')
-CLOUDFLARE_API_KEY=$(op get item Cloudflare | jq -r '.details.sections[1].fields[2].v')
-echo "CLOUDFLARE_TOKEN:" $CLOUDFLARE_TOKEN
-echo "CLOUDFLARE_EMAIL:" $CLOUDFLARE_EMAIL
-echo "CLOUDFLARE_API_KEY:" $CLOUDFLARE_API_KEY
-envchain --set cloudflare_eklhad CLOUDFLARE_EMAIL CLOUDFLARE_TOKEN CLOUDFLARE_API_KEY
-export $(envchain cloudflare_eklhad env | grep CLOUDFLARE_)
+export CLOUDFLARE_TOKEN=$(op get item Cloudflare | jq -r '.details.sections[1].fields[0].v')
+export CLOUDFLARE_EMAIL=$(op get item Cloudflare | jq -r '.details.sections[1].fields[1].v')
+export CLOUDFLARE_API_KEY=$(op get item Cloudflare | jq -r '.details.sections[1].fields[2].v')
 ```
 
 #### Set Personal CodeCov Creds
 
 ```bash
-CODECOV_TOKEN=$(op get item CodeCov | jq -r '.details.sections[1].fields[0].v')
-echo "CODECOV_TOKEN:" $CODECOV_TOKEN
-envchain --set codecov_eklhad CODECOV_TOKEN
-export $(envchain codecov_eklhad env | grep CODECOV_)
+export CODECOV_TOKEN=$(op get item CodeCov | jq -r '.details.sections[1].fields[0].v')
 ```
 
 #### Set Personal Sendgrid (SMTP) Creds
 
 ```bash
-SMTP_HOST=$(op get item Sendgrid | jq -r '.details.sections[1].fields[0].v')
-SMTP_PORT=$(op get item Sendgrid | jq -r '.details.sections[1].fields[1].v')
-SMTP_USERNAME=$(op get item Sendgrid | jq -r '.details.sections[1].fields[2].v')
-SMTP_PASSWORD=$(op get item Sendgrid | jq -r '.details.sections[1].fields[3].v')
-echo "SMTP_HOST:" $SMTP_HOST
-echo "SMTP_PORT:" $SMTP_PORT
-echo "SMTP_USERNAME:" $SMTP_USERNAME
-echo "SMTP_PASSWORD:" $SMTP_PASSWORD
-envchain --set sendgrid_eklhad SMTP_HOST SMTP_PORT SMTP_USERNAME SMTP_PASSWORD
-export $(envchain sendgrid_eklhad env | grep SMTP_)
+export SMTP_HOST=$(op get item Sendgrid | jq -r '.details.sections[1].fields[0].v')
+export SMTP_PORT=$(op get item Sendgrid | jq -r '.details.sections[1].fields[1].v')
+export SMTP_USERNAME=$(op get item Sendgrid | jq -r '.details.sections[1].fields[2].v')
+export SMTP_PASSWORD=$(op get item Sendgrid | jq -r '.details.sections[1].fields[3].v')
 ```
 
 #### Set Personal GitHub Creds
 
 ```bash
-GITHUB_TOKEN=$(op get item GitHub | jq -r '.details.sections[1].fields[0].v')
-GITHUB_SECRET=$(op get item GitHub | jq -r '.details.sections[1].fields[1].v')
-echo "GITHUB_TOKEN:" $GITHUB_TOKEN
-echo "GITHUB_SECRET:" $GITHUB_SECRET
-envchain --set github_eklhad GITHUB_TOKEN GITHUB_SECRET
-export $(envchain github_eklhad env | grep GITHUB_)
+export GITHUB_TOKEN=$(op get item GitHub | jq -r '.details.sections[1].fields[0].v')
+export GITHUB_SECRET=$(op get item GitHub | jq -r '.details.sections[1].fields[1].v')
 ```
 
 #### Set Personal Twilio Creds
 
 ```bash
-TWILIO_ACCOUNT_SID=$(op get item Twilio | jq -r '.details.sections[1].fields[0].v')
-TWILIO_AUTH_TOKEN=$(op get item Twilio | jq -r '.details.sections[1].fields[1].v')
-echo "TWILIO_ACCOUNT_SID:" $TWILIO_ACCOUNT_SID
-echo "TWILIO_AUTH_TOKEN:" $TWILIO_AUTH_TOKEN
-envchain --set twilio_eklhad TWILIO_ACCOUNT_SID TWILIO_AUTH_TOKEN
-export $(envchain twilio_eklhad env | grep TWILIO_)
+export TWILIO_ACCOUNT_SID=$(op get item Twilio | jq -r '.details.sections[1].fields[0].v')
+export TWILIO_AUTH_TOKEN=$(op get item Twilio | jq -r '.details.sections[1].fields[1].v')
 ```
 
 #### Set Personal Terraform Cloud Creds
 
 ```bash
-TFC_URL="https://app.terraform.io"
-TFC_TOKEN=$(op get item "Terraform Cloud" | jq -r '.details.sections[1].fields[0].v')
-echo "TFC_URL:" $TFC_URL
-echo "TFC_TOKEN:" $TFC_TOKEN
-envchain --set tfc_eklhad TFC_URL TFC_TOKEN
-export $(envchain tfc_eklhad env | grep TFC_)
+export TFC_URL="https://app.terraform.io"
+export TFC_TOKEN=$(op get item "Terraform Cloud" | jq -r '.details.sections[1].fields[0].v')
 ```
 
 #### Set Personal GCP Creds
@@ -394,13 +363,8 @@ export $(envchain tfc_eklhad env | grep TFC_)
 # https://console.cloud.google.com/apis/credentials/serviceaccountkey?project=eklhad-web&folder&organizationId=620944270908
 # TODO: Be sure to replace the newline with an escaped newline before adding to 1password.
 # NOTE: Be sure to replace the newline with an escaped newline before adding to 1password.
-GCP_CREDS_FS_DIR=~/.gcp
-GCP_CREDS_FS_PATH=$GCP_CREDS_FS_DIR/eklhad.json
-export GOOGLE_CLOUD_KEYFILE_JSON=$(op get item "Google dahlke.io" | jq -r '.details.sections[1].fields[0].v')
-echo $GOOGLE_CLOUD_KEYFILE_JSON | jq -r . > $GCP_CREDS_FS_PATH
-echo "GOOGLE_APPLICATION_CREDENTIALS:" $GCP_CREDS_FS_PATH
-
-envchain --set gcp_eklhad GOOGLE_APPLICATION_CREDENTIALS
+export GOOGLE_CREDENTIALS=$(op get item "Google dahlke.io" | jq -r '.details.sections[1].fields[0].v' | jq -r .)
+echo "GOOGLE_CREDENTIALS:" $GOOGLE_CREDENTIALS
 ```
 
 ### Work Vault
@@ -414,31 +378,25 @@ eval $(op signin hashicorp)
 #### Set Work AWS Creds
 
 ```bash
-AWS_ACCESS_KEY_ID=$(op get item Amazon | jq -r '.details.sections[1].fields[0].v')
-AWS_SECRET_ACCESS_KEY=$(op get item Amazon | jq -r '.details.sections[1].fields[1].v')
-echo "AWS_ACCESS_KEY_ID:" $AWS_ACCESS_KEY_ID
-echo "AWS_SECRET_ACCESS_KEY:" $AWS_SECRET_ACCESS_KEY
-envchain --set aws_hashi AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
-export $(envchain aws_hashi env | grep AWS_)
+export AWS_ACCESS_KEY_ID=$(op get item Amazon | jq -r '.details.sections[1].fields[0].v')
+export AWS_SECRET_ACCESS_KEY=$(op get item Amazon | jq -r '.details.sections[1].fields[1].v')
 ```
 
 #### Set Work Alibaba Cloud Creds
 
 ```bash
-ALICLOUD_ACCESS_KEY=$(op get item "Alibaba Cloud" | jq -r '.details.sections[1].fields[0].v')
-ALICLOUD_SECRET_KEY=$(op get item "Alibaba Cloud" | jq -r '.details.sections[1].fields[1].v')
-echo "ALICLOUD_ACCESS_KEY:" $ALICLOUD_ACCESS_KEY
-echo "ALICLOUD_SECRET_KEY:" $ALICLOUD_SECRET_KEY
-envchain --set ali_hashi ALICLOUD_ACCESS_KEY ALICLOUD_SECRET_KEY
-export $(envchain ali_hashi env | grep AWS_)
-aliyun configure
+export ALICLOUD_ACCESS_KEY=$(op get item "Alibaba Cloud" | jq -r '.details.sections[1].fields[0].v')
+export ALICLOUD_SECRET_KEY=$(op get item "Alibaba Cloud" | jq -r '.details.sections[1].fields[1].v')
 ```
 
 #### Set Work Azure Creds
 
 ```bash
 # TODO
-envchain --set azure_hashi ARM_CLIENT_ID ARM_CLIENT_SECRET ARM_SUBSCRIPTION_ID ARM_TENANT_ID
+export ARM_CLIENT_ID=""
+export ARM_CLIENT_SECRET=""
+export ARM_SUBSCRIPTION_ID=""
+export ARM_TENANT_ID=""
 az login
 ```
 
@@ -447,40 +405,27 @@ az login
 ```bash
 # TODO
 # https://console.cloud.google.com/apis/credentials?project=eklhad-web&organizationId=620944270908
-envchain --set gcp_hashi GOOGLE_CREDENTIALS
 ```
 
 #### Set Work TFC Creds
 
 ```bash
-TFC_URL="https://app.terraform.io"
-TFC_TOKEN=$(op get item "Terraform Cloud" | jq -r '.details.sections[1].fields[0].v')
-echo "TFC_URL:" $TFC_URL
-echo "TFC_TOKEN:" $TFC_TOKEN
-envchain --set tfc_hashi TFC_URL TFC_TOKEN
-export $(envchain tfc_hashi env | grep TFC_)
+export TFC_URL="https://app.terraform.io"
+export TFC_TOKEN=$(op get item "Terraform Cloud" | jq -r '.details.sections[1].fields[0].v')
 ```
 
 #### Set Work TFE Creds
 
 ```bash
-TFC_URL="<TFE_URL>"
-TFC_TOKEN="<TFE_TOKEN>"
-echo "TFC_URL:" $TFC_URL
-echo "TFC_TOKEN:" $TFC_TOKEN
-envchain --set tfe_hashi TFC_URL TFC_TOKEN
-export $(envchain tfe_hashi env | grep TFC_)
+export TFC_URL="<TFE_URL>"
+export TFC_TOKEN="<TFE_TOKEN>"
 ```
 
 #### Set Work Local Vault Creds
 
 ```bash
-VAULT_ADDR="http://localhost:8200"
-VAULT_TOKEN="root"
-echo "VAULT_ADDR:" $VAULT_ADDR
-echo "VAULT_TOKEN:" $VAULT_TOKEN
-envchain --set local_vault VAULT_ADDR VAULT_TOKEN
-export $(envchain local_vault env | grep VAULT_)
+export VAULT_ADDR="http://localhost:8200"
+export VAULT_TOKEN="root"
 ```
 
 ## Other
