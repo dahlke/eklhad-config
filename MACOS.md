@@ -1,4 +1,4 @@
-# Provisioning a macOS Machine (To My Preferences) Steps
+# Provisioning a macOS Machine (To My Preferences) eteps
 
 ## Log Into iCloud
 
@@ -85,7 +85,7 @@ git clone git@github.com:dahlke/eklhad-config.git
 brew update
 ```
 
-### Install as many commonly used apps via `brew` as I can
+### Install Commonly Used Tools and Apps via `brew`
 
 ```bash
 brew cask install 1password
@@ -98,6 +98,7 @@ brew cask install gimp
 brew install go
 brew cask install google-chrome
 brew install graphviz
+brew install htop
 brew cask install istat-menus
 brew cask install iterm2
 brew install jenv
@@ -119,6 +120,8 @@ brew cask install spotify
 brew cask install steam
 brew cask install sublime-text
 brew install the_silver_searcher
+brew install tldr
+brew install tmux
 brew install watch
 brew install watchman
 brew install wget
@@ -130,7 +133,18 @@ brew cask install zoomus
 
 brew cleanup --force
 rm -f -r /Library/Caches/Homebrew/*
+```
 
+### Install Any Remaining Commonly Used Tools and Apps
+
+[link](https://cloud.google.com/sdk/docs/quickstart-macos)
+
+```
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-303.0.0-darwin-x86_64.tar.gz
+tar xf google-cloud-sdk-303.0.0-darwin-x86_64.tar.gz
+cd google-cloud-sdk/
+./install.sh
+gcloud init
 ```
 
 ## `zsh`
@@ -172,7 +186,9 @@ vim
 ### Allow press and hold in VSCode since I use the `vim` extension
 
 ```bash
+# Setting to false disables the _Apple_ press and hold, allowing VSCode's to take over.
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 ```
 
 ### Install VSCode Extensions
@@ -196,7 +212,7 @@ open https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vsc
 # MarkdownLint
 open https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
 
-# MySQl
+# MySQL
 open https://marketplace.visualstudio.com/items?itemName=formulahendry.vscode-mysql
 
 # Python
@@ -296,7 +312,7 @@ nomad version
 packer version
 ```
 
-## Credentials 
+## Credentials
 
 ### Personal Vault
 
@@ -360,11 +376,7 @@ export TFC_TOKEN=$(op get item "Terraform Cloud" | jq -r '.details.sections[1].f
 #### Set Personal GCP Creds
 
 ```bash
-# https://console.cloud.google.com/apis/credentials/serviceaccountkey?project=eklhad-web&folder&organizationId=620944270908
-# TODO: Be sure to replace the newline with an escaped newline before adding to 1password.
-# NOTE: Be sure to replace the newline with an escaped newline before adding to 1password.
 export GOOGLE_CREDENTIALS=$(op get item "Google dahlke.io" | jq -r '.details.sections[1].fields[0].v' | jq -r .)
-echo "GOOGLE_CREDENTIALS:" $GOOGLE_CREDENTIALS
 ```
 
 ### Work Vault
