@@ -131,6 +131,15 @@ brew cask install virtualbox
 brew install yarn
 brew cask install zoomus
 
+brew tap hashicorp/tap
+brew install hashicorp/tap/boundary
+brew install hashicorp/tap/consul
+brew install hashicorp/tap/nomad
+brew install hashicorp/tap/packer
+brew install hashicorp/tap/terraform
+brew install hashicorp/tap/vault
+brew install hashicorp/tap/waypoint
+
 brew cleanup --force
 rm -f -r /Library/Caches/Homebrew/*
 ```
@@ -269,48 +278,6 @@ open https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
 
 iTerm -> General -> Preferences -> Load Preferences from (“`/.iterm”).
 
-## HashiCorp Tools
-
-```bash
-export TERRAFORM_VERSION="0.12.26"
-export VAULT_VERSION="1.4.2"
-export CONSUL_VERSION="1.7.4"
-export NOMAD_VERSION="0.11.3"
-export PACKER_VERSION="1.6.0"
-
-cd ~/Downloads
-
-wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_darwin_amd64.zip
-unzip terraform_${TERRAFORM_VERSION}_darwin_amd64.zip
-sudo mv terraform /usr/local/bin/terraform
-rm terraform_${TERRAFORM_VERSION}_darwin_amd64.zip
-
-wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_darwin_amd64.zip
-unzip vault_${VAULT_VERSION}_darwin_amd64.zip
-sudo mv vault /usr/local/bin/vault
-rm vault_${VAULT_VERSION}_darwin_amd64.zip
-
-wget https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_darwin_amd64.zip
-unzip consul_${CONSUL_VERSION}_darwin_amd64.zip
-sudo mv consul /usr/local/bin/consul
-rm consul_${CONSUL_VERSION}_darwin_amd64.zip
-
-wget https://releases.hashicorp.com/nomad/${NOMAD_VERSION}/nomad_${NOMAD_VERSION}_darwin_amd64.zip
-unzip nomad_${NOMAD_VERSION}_darwin_amd64.zip
-sudo mv nomad /usr/local/bin/nomad
-rm nomad_${NOMAD_VERSION}_darwin_amd64.zip
-
-wget https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_darwin_amd64.zip
-unzip packer_${PACKER_VERSION}_darwin_amd64.zip
-sudo mv packer /usr/local/bin/packer
-rm packer_${PACKER_VERSION}_darwin_amd64.zip
-
-terraform version
-vault version
-consul version
-nomad version
-packer version
-```
 
 ## Credentials
 
