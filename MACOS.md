@@ -425,6 +425,8 @@ Make sure `npm` is up to date. Install any important global `node` dependencies.
 npm install -g npm-check-updates
 npm-check-updates -u
 npm install
+
+npm install -g resume-cli
 ```
 
 ### `pip3`
