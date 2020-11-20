@@ -148,7 +148,7 @@ rm -f -r /Library/Caches/Homebrew/*
 
 [link](https://cloud.google.com/sdk/docs/quickstart-macos)
 
-```
+```bash
 wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-303.0.0-darwin-x86_64.tar.gz
 tar xf google-cloud-sdk-303.0.0-darwin-x86_64.tar.gz
 cd google-cloud-sdk/
