@@ -93,6 +93,7 @@ brew cask install 1password-cli
 brew install aliyun-cli
 brew install autojump
 brew install azure-cli
+brew install csshx
 brew cask install evernote
 brew cask install gimp
 brew install go
@@ -277,7 +278,6 @@ open https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
 ## iTerm2
 
 iTerm -> General -> Preferences -> Load Preferences from (“`/.iterm”).
-
 
 ## Credentials
 

@@ -23,12 +23,11 @@ Host rpi1
 
 _NOTE: If you power cycle the Pi Boards before you set up static IP addresses for each of them (below), then the IP address may change, and you may need to update the SSH config._
 
-
-# Configure SSH Keys
+## Configure SSH Keys
 
 Generate an SSH key on the intended client machine. Example:
 
-```
+```bash
 mkdir -p ~/.ssh/rpi/
 cd ~/.ssh/rpi/
 ssh-keygen
@@ -52,7 +51,6 @@ vim ~/.ssh/authorized_keys # then paste the pub key
 
 Update the clients `~/.ssh/config` file to use the private `pem` key after you set up the public key. Do this for all Pi Boards.
 
-`~/.ssh/config`
 ```txt
 Host rpi1
      HostName 10.0.1.58
@@ -62,35 +60,30 @@ Host rpi1
 
 Then make sure that the new SSH setup works, by `exit`ing the connection to the Pi Board, and re-establishing the connection without providing a password.
 
-```
+```bash
 ssh rpi1 # should have no password prompt
 ```
 
-# (Optional) Set Up Cluster SSH (`cssh`)
+## (Optional) HashiCorp Stuff
 
-*TODO*
+With `csshx` installed, and your `~/.ssh/config` properly updated, run:
 
+```bash
+csshx rpi1 rpi2 rpi3 rpi4
+```
 
-# (Optional) Set Up Static IP Addresses
+Once you are logged in to all of the boxes via `csshx`, install the relevant HashiCorp tools I want to use.
 
-*TODO*
+```bash
+sudo apt-get update
+sudo apt-get install -y consul vault nomad waypoint boundary packer terraform
+```
 
-# (Optional) HashiCorp Stuff
+### TODO
 
-## Nomad Cluster
-
-*TODO*
-https://patrick.veverka.net/2020/02/26/hashicorp-home-cluster/
-
-## Waypoint Cluster
-
-*TODO*
-
-## Consul Cluster
-
-*TODO*
-
-## Vault Cluster
-
-*TODO*
-
+- [Helpful](https://patrick.veverka.net/2020/02/26/hashicorp-home-cluster/)
+- Consul Cluster
+- Vault Cluster
+- Nomad Cluster
+- Waypoint Cluster
+- Static IP Addressing?

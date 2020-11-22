@@ -11,7 +11,7 @@ A tool to gather your configurations and store them here so you can migrate pers
 To automate the collection of files, use the `figo.py` script, which will collect all files listed in `config/files.json`:
 
 ```bash
-$ ./figo.py --collect
+./figo.py --collect
 ```
 
 ### Applying Config Files
@@ -19,7 +19,7 @@ $ ./figo.py --collect
 To apply all the files on a target host, use the apply command, making sure you have updated `config/files.json` for whatever the desired target paths are..
 
 ```bash
-$ ./figo.py --apply
+./figo.py --apply
 ```
 
 ## MacOS
