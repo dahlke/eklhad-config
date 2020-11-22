@@ -12,7 +12,7 @@ After creating and verifying each image, set up the WiFi for each Pi Board by mo
 
 Once the image is successfully created, and the WiFi is configured, start up each Pi board, and log into the box manually, using an HDMI monitor and a USB keyboard plugged into the board. If it's the first time you are logging into the Pi Board, The initial log in will be `ubuntu:ubuntu`, and you will be forced to change it (Ex: `ubuntu:foobar123`).
 
-After you have logged into the board, run `ip addr` and check the `wlan0` IP address in the output. You'll want to copy this address to whichever machine you intend to use as a client for each Pi Board. It's a good idea to write this info to `~/.ssh/config` for easy access in the future. Example format below, where the IP address is `10.0.1.58`. 
+After you have logged into the board, run `ip addr` and check the `wlan0` IP address in the output. You'll want to copy this address to whichever machine you intend to use as a client for each Pi Board. It's a good idea to write this info to `~/.ssh/config` for easy access in the future. Example format below, where the IP address is `10.0.1.58`.
 
 ```txt
 Host rpi1
