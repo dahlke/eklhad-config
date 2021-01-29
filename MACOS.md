@@ -93,12 +93,14 @@ brew cask install 1password-cli
 brew install aliyun-cli
 brew install autojump
 brew install azure-cli
+brew install awscli
 brew install csshx
 brew cask install evernote
 brew cask install gimp
 brew install go
 brew cask install google-chrome
 brew install graphviz
+brew install helm
 brew install htop
 brew cask install istat-menus
 brew cask install iterm2
@@ -317,6 +319,18 @@ export SMTP_HOST=$(op get item Sendgrid | jq -r '.details.sections[1].fields[0].
 export SMTP_PORT=$(op get item Sendgrid | jq -r '.details.sections[1].fields[1].v')
 export SMTP_USERNAME=$(op get item Sendgrid | jq -r '.details.sections[1].fields[2].v')
 export SMTP_PASSWORD=$(op get item Sendgrid | jq -r '.details.sections[1].fields[3].v')
+```
+
+#### Set Personal Instagram Creds
+
+```bash
+export INSTAGRAM_ACCESS_TOKEN=$(op get item Instagram | jq -r '.details.sections[1].fields[0].v')
+```
+
+#### Set Personal NYTimes Creds
+
+```bash
+export NYT_TOKEN=$(op get item "NYTimes Developer" | jq -r '.details.sections[0].fields[0].v')
 ```
 
 #### Set Personal GitHub Creds

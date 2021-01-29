@@ -1,1 +1,4 @@
 .DS_Store
+
+scripts/python/consolidate_contacts/google.json
+scripts/python/consolidate_contacts/icloud.json
