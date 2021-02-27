@@ -113,6 +113,7 @@ brew cask install macdown
 brew install minikube
 brew install node
 brew cask install nordvpn
+brew install pandoc
 brew cask install postman
 brew cask install pgadmin4
 brew install postgresql
@@ -215,8 +216,11 @@ open https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 # Go
 open https://code.visualstudio.com/docs/languages/go
 
-# HCL
-open https://marketplace.visualstudio.com/items?itemName=wholroyd.HCL
+# HashiCorp Terraform
+open https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform
+
+# Jupyter
+open https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter
 
 # Kubernetes
 open https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools
@@ -230,11 +234,11 @@ open https://marketplace.visualstudio.com/items?itemName=formulahendry.vscode-my
 # Python
 open https://marketplace.visualstudio.com/items?itemName=ms-python.python
 
-# Terraform
-open https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform
-
 # vim
 open https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+
+# YAML
+open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 ```
 
 ## MacOS
