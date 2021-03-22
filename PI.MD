@@ -64,6 +64,15 @@ Then make sure that the new SSH setup works, by `exit`ing the connection to the 
 ssh rpi1 # should have no password prompt
 ```
 
+## Change Pi Hostname per Board
+
+On each board, change the hostname to represent it's number in the rack to make it easier to find later.
+
+```bash
+sudo hostnamectl set-hostname rpi1
+...
+```
+
 ## (Optional) HashiCorp Stuff
 
 With `csshx` installed, and your `~/.ssh/config` properly updated, run:
@@ -79,6 +88,25 @@ sudo apt-get update
 sudo apt-get install -y consul vault nomad waypoint boundary packer terraform
 ```
 
+# Helpful
+
+## Find Raspberry Pi IP Addresses on Home Network
+
+```bash
+arp -a
+```
+
+And look for something like the below:
+
+TODO: do this better / update hostnames on the Pis
+
+```
+? (10.0.1.76) at b8:27:eb:6d:c0:94 on en0 ifscope [ethernet]
+? (10.0.1.77) at b8:27:eb:2a:3e:34 on en0 ifscope [ethernet]
+? (10.0.1.78) at b8:27:eb:2e:fd:c3 on en0 ifscope [ethernet]
+? (10.0.1.79) at b8:27:eb:a5:70:d4 on en0 ifscope [ethernet]
+```
+
 ### TODO
 
 - [Helpful](https://patrick.veverka.net/2020/02/26/hashicorp-home-cluster/)
@@ -86,4 +114,3 @@ sudo apt-get install -y consul vault nomad waypoint boundary packer terraform
 - Vault Cluster
 - Nomad Cluster
 - Waypoint Cluster
-- Static IP Addressing?
