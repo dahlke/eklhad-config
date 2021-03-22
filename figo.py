@@ -8,9 +8,9 @@ import os
 COLLLECTED_PREFIX_DST = "collected"
 FILE_CONFIG_PATH = "config/files.json"
 
-MAYBE_USEFUL = [
-    "com.apple.AppleMultitouchMouse.plist",
-    "com.apple.AppleMultitouchTrackpad.plist",
+MAC_SYS_ALLOW_LIST = [
+    "com.apple.applemultitouchmouse.plist",
+    "com.apple.applemultitouchtrackpad.plist",
     "com.apple.dock.plist",
     "com.apple.symbolichotkeys.plist"
 ]
@@ -41,7 +41,7 @@ def get_macos_sysprefs():
     # TODO
     # General
     for filename in os.listdir(prefs_path):
-        if ".plist" in filename and filename in MAYBE_USEFUL:
+        if ".plist" in filename and filename in MAC_SYS_ALLOW_LIST:
             filepath = prefs_path + filename
             with open(filepath, 'rb') as fp:
                 pl = plistlib.load(fp)
