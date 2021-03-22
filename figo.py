@@ -1,11 +1,19 @@
 #!/usr/local/bin/python3
 from shutil import copy
 import argparse
+import plistlib
 import json
 import os
 
 COLLLECTED_PREFIX_DST = "collected"
 FILE_CONFIG_PATH = "config/files.json"
+
+MAYBE_USEFUL = [
+    "com.apple.AppleMultitouchMouse.plist",
+    "com.apple.AppleMultitouchTrackpad.plist",
+    "com.apple.dock.plist",
+    "com.apple.symbolichotkeys.plist"
+]
 
 def collect(files):
     for f in files:
@@ -26,6 +34,19 @@ def apply(files):
             os.makedirs(f["src_abs_path"], exist_ok=True)
         copy(f['dst_abs_path'], f['src_abs_path'])
         print(f['dst_abs_path'], 'copied to', f['src_abs_path'])
+
+def get_macos_sysprefs():
+    prefs_path = "/Users/neil/Library/Preferences/"
+
+    # TODO
+    # General
+    for filename in os.listdir(prefs_path):
+        if ".plist" in filename and filename in MAYBE_USEFUL:
+            filepath = prefs_path + filename
+            with open(filepath, 'rb') as fp:
+                pl = plistlib.load(fp)
+                print(filepath, pl)
+                print("\n\n\n\n\n\n")
 
 def main():
     files = []
@@ -54,6 +75,8 @@ if __name__ == "__main__":
     parser.add_argument('-c', '--collect', action='store_true', help='Collect the files from config/files.json and store in collected dir.')
     parser.add_argument('-a', '--apply', action='store_true', help='Apply the files from collected dir to the local machine.')
     args = parser.parse_args()
+
+    get_macos_sysprefs()
 
     if not (args.collect or args.apply):
         parser.error('No action requested, add --collect or --apply')
