@@ -88,29 +88,30 @@ sudo apt-get update
 sudo apt-get install -y consul vault nomad waypoint boundary packer terraform
 ```
 
+### Install Consul, Vault, Nomad, Waypoint, Boundary, Terraform
+
+```bash
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt-get update
+
+sudo apt-get install vault
+sudo apt-get install consul
+sudo apt-get install nomad
+sudo apt-get install terraform
+sudo apt-get install waypoint
+```
+
 # Helpful
 
 ## Find Raspberry Pi IP Addresses on Home Network
 
+["All raspberry devices MAC addresses started with `B8:27:EB` (for RPi4 B they start with `dc:a6:32`, replace where appropriate)."](https://raspberrypi.stackexchange.com/questions/13936/find-raspberry-pi-address-on-local-network)
+
 ```bash
-arp -a
-```
-
-And look for something like the below:
-
-TODO: do this better / update hostnames on the Pis
-
-```
-? (10.0.1.76) at b8:27:eb:6d:c0:94 on en0 ifscope [ethernet]
-? (10.0.1.77) at b8:27:eb:2a:3e:34 on en0 ifscope [ethernet]
-? (10.0.1.78) at b8:27:eb:2e:fd:c3 on en0 ifscope [ethernet]
-? (10.0.1.79) at b8:27:eb:a5:70:d4 on en0 ifscope [ethernet]
+arp -na | grep -i b8:27:eb
 ```
 
 ### TODO
 
 - [Helpful](https://patrick.veverka.net/2020/02/26/hashicorp-home-cluster/)
-- Consul Cluster
-- Vault Cluster
-- Nomad Cluster
-- Waypoint Cluster

@@ -111,6 +111,7 @@ brew install kubernetes-cli
 brew install maven
 brew cask install macdown
 brew install minikube
+brew install nmap
 brew install node
 brew cask install nordvpn
 brew install pandoc
@@ -153,8 +154,8 @@ rm -f -r /Library/Caches/Homebrew/*
 [link](https://cloud.google.com/sdk/docs/quickstart-macos)
 
 ```bash
-wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-303.0.0-darwin-x86_64.tar.gz
-tar xf google-cloud-sdk-303.0.0-darwin-x86_64.tar.gz
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-339.0.0-darwin-x86_64.tar.gz
+tar xf google-cloud-sdk-339.0.0-darwin-x86_64.tar.gz
 cd google-cloud-sdk/
 ./install.sh
 gcloud init
