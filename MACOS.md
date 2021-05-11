@@ -232,6 +232,9 @@ open https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markd
 # MySQL
 open https://marketplace.visualstudio.com/items?itemName=formulahendry.vscode-mysql
 
+# PostCSS
+open https://marketplace.visualstudio.com/items?itemName=csstools.postcss
+
 # Python
 open https://marketplace.visualstudio.com/items?itemName=ms-python.python
 
@@ -444,6 +447,8 @@ Make sure `npm` is up to date. Install any important global `node` dependencies.
 npm install -g npm-check-updates
 npm-check-updates -u
 npm install
+
+npm install -g depcheck
 ```
 
 ### `pip3`
