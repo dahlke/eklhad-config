@@ -145,6 +145,9 @@ brew install hashicorp/tap/terraform
 brew install hashicorp/tap/vault
 brew install hashicorp/tap/waypoint
 
+brew tap mike-engel/jwt-cli
+brew install jwt-cli
+
 brew cleanup --force
 rm -f -r /Library/Caches/Homebrew/*
 ```
