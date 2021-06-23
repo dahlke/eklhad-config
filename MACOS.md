@@ -100,6 +100,7 @@ brew cask install gimp
 brew install go
 brew cask install google-chrome
 brew install graphviz
+brew cask install graphql-playground
 brew install helm
 brew install htop
 brew cask install istat-menus
