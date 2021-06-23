@@ -100,7 +100,7 @@ brew cask install gimp
 brew install go
 brew cask install google-chrome
 brew install graphviz
-brew cask install graphql-playground
+brew install --cask graphql-playground
 brew install helm
 brew install htop
 brew cask install istat-menus
@@ -220,6 +220,9 @@ open https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
 # Go
 open https://code.visualstudio.com/docs/languages/go
+
+# GraphQL
+open https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql
 
 # HashiCorp Terraform
 open https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform
