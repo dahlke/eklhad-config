@@ -149,6 +149,9 @@ brew install hashicorp/tap/waypoint
 brew tap mike-engel/jwt-cli
 brew install jwt-cli
 
+brew tap fwartner/tap
+brew install fwartner/tap/mac-cleanup
+
 brew cleanup --force
 rm -f -r /Library/Caches/Homebrew/*
 ```
