@@ -10,6 +10,8 @@
 # https://learn.hashicorp.com/tutorials/consul/deployment-guide?in=consul/production-deploy #
 #############################################################################################
 
+DC_NAME="dc-1"
+
 
 ##################
 # INSTALL CONSUL #
