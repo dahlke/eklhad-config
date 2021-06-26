@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: scp all the install files
+
 ##################
 # COMMON INSTALL #
 ##################

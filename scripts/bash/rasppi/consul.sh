@@ -24,9 +24,11 @@ CONSUL_GOSSIP_KEY=$(consul keygen)
 echo $CONSUL_GOSSIP_KEY
 
 ## Generate TLS certificates for RPC encryption
+
 ### Create the Certificate Authority
 consul tls ca create
 
+# TODO: store the cert in a variable, place it on the disk as well.
 consul tls cert create -server -dc rpi_dc1
 
 # The CA cert must be distributed to all hosts in the system.
