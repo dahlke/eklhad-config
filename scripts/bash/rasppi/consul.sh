@@ -1,10 +1,19 @@
 #!/bin/bash
 
-##########
-# CONSUL #
-##########
+# TODO:
+# - remove all the echos to the file system when it's ready to go, format the machines so they are fresh
+# - more comments from the production deploy docs
 
-# https://learn.hashicorp.com/tutorials/consul/deployment-guide?in=consul/production-deploy
+
+#############################################################################################
+# 										CONSUL 												#
+# https://learn.hashicorp.com/tutorials/consul/deployment-guide?in=consul/production-deploy #
+#############################################################################################
+
+
+##################
+# INSTALL CONSUL #
+##################
 
 # The consul command features opt-in autocompletion for flags, subcommands, and arguments (where supported).
 consul -autocomplete-install
@@ -17,15 +26,19 @@ sudo useradd --system --home /etc/consul.d --shell /bin/false consul
 sudo mkdir --parents /opt/consul
 sudo chown --recursive consul:consul /opt/consul
 
-# Prepare the security credentials
 
-## Generate the gossip encryption key
+####################################
+# PREPARE THE SECURITY CREDENTIALS #
+####################################
+
+# Generate the gossip encryption key (and store it for later usage)
 CONSUL_GOSSIP_KEY=$(consul keygen)
 echo $CONSUL_GOSSIP_KEY
+echo "export CONSUL_GOSSIP_KEY=$CONSUL_GOSSIP_KEY" >> ~/.bashrc
 
-## Generate TLS certificates for RPC encryption
 
-### Create the Certificate Authority
+# Generate TLS certificates for RPC encryption
+# Create the Certificate Authority
 consul tls ca create
 
 # TODO: store the cert in a variable, place it on the disk as well.
@@ -35,9 +48,9 @@ consul tls cert create -server -dc rpi_dc1
 # TODO: only do this on the primary
 # scp consul-agent-ca.pem <dc-name>-<server/client>-consul-<cert-number>.pem <dc-name>-<server/client>-consul-<cert-number>-key.pem <USER>@<PUBLIC_IP>:/etc/consul.d/
 
-#################
-# CONSUL AGENTS #
-#################
+###########################
+# CONFIGURE CONSUL AGENTS #
+###########################
 
 sudo mkdir --parents /etc/consul.d
 sudo touch /etc/consul.d/consul.hcl
@@ -70,9 +83,11 @@ performance {
 }
 EOF
 
-##################
-# CONSUL SERVERS #
-##################
+
+############################
+# CONFIGURE CONSUL SERVERS #
+############################
+
 sudo touch /etc/consul.d/server.hcl
 sudo chown --recursive consul:consul /etc/consul.d
 sudo chmod 640 /etc/consul.d/server.hcl
@@ -85,9 +100,11 @@ client_addr = "0.0.0.0"
 ui = true
 EOF
 
-###################
-# SYSTEMD PROCESS #
-###################
+
+################################
+# CONFIGURE THE CONSUL PROCESS #
+################################
+
 sudo touch /usr/lib/systemd/system/consul.service
 
 cat <<-EOF > /usr/lib/systemd/system/consul.service
@@ -118,14 +135,20 @@ sudo systemctl enable consul
 sudo systemctl start consul
 sudo systemctl status consul
 
+
+######################################
+# SETUP CONSUL ENVIRONMENT VARIABLES #
+######################################
+
 # TODO: add these to the bashrc
 export CONSUL_CACERT=/etc/consul.d/consul-agent-ca.pem
 export CONSUL_CLIENT_CERT=/etc/consul.d/<dc-name>-<server/ client>-consul-<cert-number>.pem
 export CONSUL_CLIENT_KEY=/etc/consul.d/<dc-name>-<server/   client>-consul-<cert-number>-key.pem
 
-#################
-# BOOTSTRAP ACL #
-#################
+
+############################
+# BOOTSTRAP THE ACL SYSTEM #
+############################
 
 # Working from one agent generate the Consul bootstrap token, which has unrestricted privileges.  This will return the Consul bootstrap token.
 # You will need the SecretID for all subsequent Consul API requests (including CLI and UI). Ensure that you save the SecretID.
@@ -171,4 +194,9 @@ consul acl set-agent-token \
   -token="<Management Token SecretID>" \
   agent "<Node Token SecretID>"
 
-# TODO: ... Apply Enterprise License?
+
+#################################
+# ... APPLY ENTERPRISE LICENSE? #
+#################################
+
+exit 0
