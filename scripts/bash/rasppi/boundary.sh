@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # TODO: install all the basics, take CLI commands if it's a server or agent
-# TODO: the below is not bulletproof, needs to be tweaked
+# TODO: the below is very messy and not bulletproof, mostly a notepad for now
 # TODO: don't use the generated resources
 
 #!/bin/bash -l
@@ -228,10 +228,37 @@ export BOUNDARY_TOKEN=$( \
 
 export GEN_GLOBAL_SCOPE_ID=$(boundary scopes list -format=json | jq -r '.items[0].id')
 export GEN_PROJ_SCOPE_ID=$(boundary scopes list -scope-id=$GEN_GLOBAL_SCOPE_ID -format=json | jq -r '.items[0].id')
-echo $GEN_GLOBAL_SCOPE_ID
-echo $GEN_PROJ_SCOPE_ID
-
 export GEN_TARGET_ID=$(boundary targets list -scope-id=$GEN_PROJ_SCOPE_ID -format=json | jq -r '.items[0].id')
-echo $GEN_TARGET_ID
+
+boundary authenticate password \
+  -auth-method-id=<AUTH_METHOD_ID> \
+  -login-name=<ADMIN_USERNAME> \
+  -password=<ADMIN_PASSWORD>
+
+# With [`pass`](https://www.passwordstore.org/):
+
+boundary authenticate password \
+  -format=json \
+  -auth-method-id=$GEN_AUTH_METHOD \
+  -login-name=$ADMIN_USERNAME \
+  -password=$ADMIN_PASSWORD | jq -r .
+
+# With [`gnome-keyring`](https://wiki.gnome.org/Projects/GnomeKeyring):
+
+boundary authenticate password \
+  -format=json \
+  -auth-method-id=$GEN_AUTH_METHOD \
+  -keyring-type="secret-service"\
+  -login-name=$ADMIN_USERNAME \
+  -password=$ADMIN_PASSWORD | jq -r .
+
+# With no password manager:
+
+boundary authenticate password \
+  -format=json \
+  -auth-method-id=$GEN_AUTH_METHOD \
+  -keyring-type="none"\
+  -login-name=$ADMIN_USERNAME \
+  -password=$ADMIN_PASSWORD | jq -r .
 
 exit 0
