@@ -19,16 +19,27 @@ def install_hashistack(nodes):
 		hostname = node["hostname"]
 		conn = Connection(hostname)
 		# TODO: don't hardcode the target
-		conn.run("mkdir -p /home/ubuntu/hashistack")
-		conn.put("../../bash/rasppi/", "/home/ubuntu/hashistack")
+		conn.put("../../bash/rasppi/install.sh", "/home/ubuntu/install.sh")
+		# conn.put("../../bash/rasppi/consul/setup_basics.sh", "/home/ubuntu/consul/setup_basics.sh")
+		# conn.put("../../bash/rasppi/consul/setup_primary.sh", "/home/ubuntu/consul/setup_primary.sh")
+
+		conn.run("chmod 755 *.sh")
+
+		install_result = conn.run("./install.sh")
+		print(install_result)
+
+		basics_result = conn.run("./consul/setup_basics.sh")
+		print(basics_result)
+
+		primary_result = conn.run("./consul/setup_primary.sh")
+		print(primary_result)
+
+		# TODO: zip and then unpack them
+		# c.put('myfiles.tgz', '/opt/mydata')
+		# c.run('tar -C /opt/mydata -xzvf /opt/mydata/myfiles.tgz')
 		# conn.put("../../bash/rasppi/install.sh", "/home/ubuntu")
 		# from fabric import Connection
 		# c = Connection('web1')
-		# c.put('myfiles.tgz', '/opt/mydata')
-		# c.run('tar -C /opt/mydata -xzvf /opt/mydata/myfiles.tgz')
-
-		result = conn.run('ls /tmp/')
-		print("result", result)
 		break
 
 def setup_primary():

@@ -11,12 +11,12 @@ sudo apt-add-repository -y "deb [arch=amd64] https://apt.releases.hashicorp.com 
 sudo apt-get update
 
 # Install all the clustered HashiCorp tool binaries
-sudo apt-get install vault
-sudo apt-get install consul
-sudo apt-get install nomad
-sudo apt-get install boundary
-sudo apt-get install waypoint
-sudo apt-get install terraform
+sudo apt-get install -y vault
+sudo apt-get install -y consul
+sudo apt-get install -y nomad
+sudo apt-get install -y boundary
+sudo apt-get install -y waypoint
+sudo apt-get install -y terraform
 
 
 # TODO: Setup and run all the services we just installed.
