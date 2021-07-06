@@ -19,6 +19,4 @@ sudo apt-get install waypoint
 sudo apt-get install terraform
 
 
-# Setup and run all the services we just installed.
-
-sh consul.sh -t "server" -d "dc1"
+# TODO: Setup and run all the services we just installed.

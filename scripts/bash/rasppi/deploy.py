@@ -1,1 +1,0 @@
-# TODO: python script that shuffles all the files around and handles edge cases better than bash

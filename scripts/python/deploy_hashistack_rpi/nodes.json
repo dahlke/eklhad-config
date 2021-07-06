@@ -2,19 +2,23 @@
 	"nodes": [
 		{
 			"name": "rpi1",
+			"hostname": "rpi1",
 			"ip": "10.0.1.96"
 		},
 		{
 			"name": "rpi2",
+			"hostname": "rpi2",
 			"ip": "10.0.1.98"
 		},
 		{
 			"name": "rpi3",
+			"hostname": "rpi3",
 			"ip": "10.0.1.99"
 		},
 		{
 			"name": "rpi4",
+			"hostname": "rpi4",
 			"ip": "10.0.1.97"
-		},
+		}
 	]
 }
