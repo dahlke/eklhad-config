@@ -88,60 +88,14 @@ sudo apt-get update
 sudo apt-get install -y consul vault nomad waypoint boundary packer terraform
 ```
 
-### Install Consul, Vault, Nomad, Waypoint, Boundary, Terraform
+### Install and Run Consul, Vault, Nomad, Waypoint, Boundary, Terraform
 
-```bash
-curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-sudo apt-get update
+See [the deployment script](./scripts/raspi/deploy.py) and [install script](./scripts/raspi/rasppi.sh) for further info.
 
-sudo apt-get install vault
-sudo apt-get install consul
-sudo apt-get install nomad
-sudo apt-get install terraform
-sudo apt-get install boundary
-sudo apt-get install waypoint
-```
+- [Vault Deployment Guide](https://learn.hashicorp.com/tutorials/consul/deployment-guide?in=consul/production-deploy)
+- [Consul Deployment Guide](https://learn.hashicorp.com/tutorials/vault/deployment-guide)
 
-### Run Consul Servers in `systemd`
-
-[Guide](https://learn.hashicorp.com/tutorials/consul/deployment-guide?in=consul/production-deploy)
-
-```bash
-TODO
-```
-
-### Run Vault Servers in `systemd`
-
-[Guide](https://learn.hashicorp.com/tutorials/vault/deployment-guide)
-
-```bash
-TODO
-```
-
-### Run Nomad Servers in `systemd`
-
-[Guide](TODO
-
-```bash
-TODO
-```
-
-### Run Boundary Controllers in `systemd`
-
-[Guide](TODO)
-
-```bash
-TODO
-```
-
-### Run Waypoint Servers in `systemd`
-
-[Guide](TODO)
-
-```bash
-TODO
-```
+TODO: Deployment scripts
 
 # Helpful
 
