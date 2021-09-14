@@ -88,54 +88,56 @@ brew update
 ### Install Commonly Used Tools and Apps via `brew`
 
 ```bash
-brew cask install 1password
-brew cask install 1password-cli
+brew install --cask 1password
+brew install --cask 1password-cli
 brew install aliyun-cli
 brew install autojump
 brew install azure-cli
 brew install awscli
 brew install csshx
-brew cask install evernote
-brew cask install gimp
+brew install eksctl
+brew install --cask evernote
+brew install --cask gimp
 brew install go
-brew cask install google-chrome
+brew install --cask google-chrome
+brew install --cask google-drive
 brew install graphviz
 brew install --cask graphql-playground
 brew install helm
 brew install htop
-brew cask install istat-menus
-brew cask install iterm2
+brew install --cask istat-menus
+brew install --cask iterm2
 brew install jenv
 brew install jq
-brew cask install keybase
+brew install --cask keybase
 brew install kubernetes-cli
 brew install maven
-brew cask install macdown
+brew install --cask macdown
 brew install minikube
 brew install nmap
 brew install node
-brew cask install nordvpn
+brew install --cask nordvpn
 brew install pandoc
-brew cask install postman
-brew cask install pgadmin4
+brew install --cask postman
+brew install --cask pgadmin4
 brew install postgresql
 brew install python
-brew cask install slack
+brew install --cask slack
 brew install socat
-brew cask install spotify
-brew cask install steam
-brew cask install sublime-text
+brew install --cask spotify
+brew install --cask steam
+brew install --cask sublime-text
 brew install the_silver_searcher
 brew install tldr
 brew install tmux
 brew install watch
 brew install watchman
 brew install wget
-brew cask install vagrant
+brew install --cask vagrant
 brew install vim
-brew cask install virtualbox
+brew install --cask virtualbox
 brew install yarn
-brew cask install zoomus
+brew install --cask zoomus
 
 brew tap hashicorp/tap
 brew install hashicorp/tap/boundary

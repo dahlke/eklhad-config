@@ -37,9 +37,6 @@ def install_hashistack(nodes):
 		# TODO: zip and then unpack them
 		# c.put('myfiles.tgz', '/opt/mydata')
 		# c.run('tar -C /opt/mydata -xzvf /opt/mydata/myfiles.tgz')
-		# conn.put("../../bash/rasppi/install.sh", "/home/ubuntu")
-		# from fabric import Connection
-		# c = Connection('web1')
 		break
 
 def setup_primary():
