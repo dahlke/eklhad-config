@@ -2,8 +2,12 @@ variable "rpi_addresses" {
 	type = map
 }
 
-variable "rpi_leader_hostname" {
+variable "rpi_leader_address" {
 	type = string
+}
+
+variable "rpi_follower_addresses" {
+	type = map
 }
 
 variable "rpi_username" {

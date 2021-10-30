@@ -113,3 +113,4 @@ Or, when using AirPort - open AirPort Utility and hover over the connected devic
 
 - Add Telemetry (to all that apply)
 - Add Auditing (to all that apply)
+- Remove the Python deploy script for RPi
