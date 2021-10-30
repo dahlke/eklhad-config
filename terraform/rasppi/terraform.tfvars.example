@@ -1,0 +1,9 @@
+rpi_username = ""
+rpi_ssh_priv_key_path = ""
+
+rpi_addresses = {
+  rpi1 = ""
+  rpi2 = ""
+}
+
+rpi_leader_address = ""

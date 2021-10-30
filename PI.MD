@@ -88,26 +88,14 @@ sudo apt-get update
 sudo apt-get install -y consul vault nomad waypoint boundary packer terraform
 ```
 
-### Install and Run Consul, Vault, Nomad, Waypoint, Boundary, Terraform
-
-See [the deployment script](./scripts/raspi/deploy.py) and [install script](./scripts/raspi/rasppi.sh) for further info.
+### Install and Run Consul, Vault, Nomad, Waypoint, Boundary, Terraform, Packer
 
 - [Vault Deployment Guide](https://learn.hashicorp.com/tutorials/consul/deployment-guide?in=consul/production-deploy)
 - [Consul Deployment Guide](https://learn.hashicorp.com/tutorials/vault/deployment-guide)
 
 #### Steps:
-- `scp` the HashiStack install script to every machine
-- `scp` the Consul install script to every machine
-- Run the Consul primary install script, get the Gossip Key
-- Run the Consul servers install scripts
-- Run the Consul agents install scripts w/ the keys and IPs from above
 
-TODO: Deployment scripts, example commands like below
-TODO: build this into a Packer image where possible
-```
-./consul.sh -t "primary" -n "dc1"
-./consul.sh -t "primary" -n "dc1" -r
-```
+- TODO: run terraform apply and simplify this greatly
 
 # Helpful
 
@@ -123,6 +111,5 @@ Or, when using AirPort - open AirPort Utility and hover over the connected devic
 
 ### TODO
 
-- [Helpful](https://patrick.veverka.net/2020/02/26/hashicorp-home-cluster/)
 - Add Telemetry (to all that apply)
 - Add Auditing (to all that apply)
