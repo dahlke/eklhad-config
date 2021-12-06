@@ -90,8 +90,8 @@ sudo apt-get install -y consul vault nomad waypoint boundary packer terraform
 
 ### Install and Run Consul, Vault, Nomad, Waypoint, Boundary, Terraform, Packer
 
-- [Vault Deployment Guide](https://learn.hashicorp.com/tutorials/consul/deployment-guide?in=consul/production-deploy)
-- [Consul Deployment Guide](https://learn.hashicorp.com/tutorials/vault/deployment-guide)
+- [Consul Deployment Guide](https://learn.hashicorp.com/tutorials/consul/deployment-guide?in=consul/production-deploy)
+- [Vault Deployment Guide](https://learn.hashicorp.com/tutorials/vault/deployment-guide)
 
 #### Steps:
 

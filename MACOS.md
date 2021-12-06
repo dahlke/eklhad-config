@@ -95,6 +95,7 @@ brew install autojump
 brew install azure-cli
 brew install awscli
 brew install csshx
+brew install driftctl
 brew install eksctl
 brew install --cask evernote
 brew install --cask gimp

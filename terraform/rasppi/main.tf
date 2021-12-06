@@ -48,8 +48,8 @@ resource "null_resource" "rpi_setup_leader" {
   }
 
   provisioner "file" {
-    source      = "../../scripts/bash/rasppi/setup_leader.sh"
-    destination = "/home/ubuntu/scripts/setup_leader.sh"
+    source      = "../../scripts/bash/rasppi/consul/setup_leader.sh"
+    destination = "/home/ubuntu/scripts/consul/setup_leader.sh"
   }
 
   provisioner "remote-exec" {
