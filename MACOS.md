@@ -141,7 +141,7 @@ open https://github.com/instruqt/cli/releases
 open https://apps.apple.com/us/app/magnet/id441258766?mt=12
 
 # VS Code
-open https://code.visualstudio.com/download
+https://code.visualstudio.com/insiders/
 ```
 
 ## Log Into 1Password
