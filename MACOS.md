@@ -56,7 +56,7 @@ brew install --cask evernote
 # brew install --cask gimp
 brew install go
 brew install --cask google-chrome
-# brew install --cask google-drive
+brew install --cask google-drive
 brew install graphviz
 brew install --cask graphql-playground
 brew install helm
