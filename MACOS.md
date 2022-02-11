@@ -113,8 +113,8 @@ rm -f -r /Library/Caches/Homebrew/*
 [GCP SDK Quickstart MacOS](https://cloud.google.com/sdk/docs/quickstart-macos)
 
 ```bash
-wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-339.0.0-darwin-x86_64.tar.gz
-tar xf google-cloud-sdk-339.0.0-darwin-x86_64.tar.gz
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-372.0.0-darwin-x86_64.tar.gz
+tar xf google-cloud-sdk-372.0.0-darwin-x86_64.tar.gz
 cd google-cloud-sdk/
 ./install.sh
 gcloud init
