@@ -46,14 +46,14 @@ brew update
 brew install --cask 1password
 brew install --cask 1password-cli
 brew install aliyun-cli
-brew install autojump
+# brew install autojump
 brew install azure-cli
 brew install awscli
 brew install csshx
 brew install driftctl
 brew install eksctl
 brew install --cask evernote
-brew install --cask gimp
+# brew install --cask gimp
 brew install go
 brew install --cask google-chrome
 brew install --cask google-drive
@@ -72,7 +72,7 @@ brew install --cask macdown
 brew install minikube
 brew install nmap
 brew install node
-brew install --cask nordvpn
+# brew install --cask nordvpn
 brew install --cask postman
 brew install --cask pgadmin4
 brew install postgresql
