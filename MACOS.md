@@ -90,7 +90,7 @@ brew install --cask vagrant
 brew install vim
 brew install --cask virtualbox
 # brew install yarn
-brew install --cask zoomus
+brew install --cask zoom
 
 brew tap hashicorp/tap
 brew install hashicorp/tap/boundary
@@ -110,7 +110,7 @@ rm -f -r /Library/Caches/Homebrew/*
 
 ### Install Any Remaining Commonly Used Tools and Apps
 
-[link](https://cloud.google.com/sdk/docs/quickstart-macos)
+[GCP SDK Quickstart MacOS](https://cloud.google.com/sdk/docs/quickstart-macos)
 
 ```bash
 wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-339.0.0-darwin-x86_64.tar.gz
