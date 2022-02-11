@@ -56,7 +56,7 @@ brew install --cask evernote
 # brew install --cask gimp
 brew install go
 brew install --cask google-chrome
-brew install --cask google-drive
+# brew install --cask google-drive
 brew install graphviz
 brew install --cask graphql-playground
 brew install helm
@@ -80,7 +80,7 @@ brew install python
 brew install --cask slack
 # brew install socat
 brew install --cask spotify
-brew install --cask steam
+# brew install --cask steam
 brew install --cask sublime-text
 brew install the_silver_searcher
 brew install watch
@@ -103,9 +103,6 @@ brew install hashicorp/tap/waypoint
 
 brew tap mike-engel/jwt-cli
 brew install jwt-cli
-
-brew tap fwartner/tap
-brew install fwartner/tap/mac-cleanup
 
 brew cleanup --force
 rm -f -r /Library/Caches/Homebrew/*
