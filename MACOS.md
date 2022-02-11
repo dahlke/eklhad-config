@@ -10,6 +10,103 @@ This is the first step since it will help with syncing all of the settings that 
 xcode-select --install
 ```
 
+## `brew`
+
+### Install `brew`
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+### Update `brew`
+
+```bash
+brew update
+```
+
+### Install Commonly Used Tools and Apps via `brew`
+
+```bash
+brew install --cask 1password
+brew install --cask 1password-cli
+brew install aliyun-cli
+brew install autojump
+brew install azure-cli
+brew install awscli
+brew install csshx
+brew install driftctl
+brew install eksctl
+brew install --cask evernote
+brew install --cask gimp
+brew install go
+brew install --cask google-chrome
+brew install --cask google-drive
+brew install graphviz
+brew install --cask graphql-playground
+brew install helm
+brew install htop
+brew install --cask istat-menus
+brew install --cask iterm2
+brew install jenv
+brew install jq
+brew install --cask keybase
+brew install kubernetes-cli
+brew install maven
+brew install --cask macdown
+brew install minikube
+brew install nmap
+brew install node
+brew install --cask nordvpn
+brew install --cask postman
+brew install --cask pgadmin4
+brew install postgresql
+brew install python
+brew install --cask slack
+brew install socat
+brew install --cask spotify
+brew install --cask steam
+brew install --cask sublime-text
+brew install the_silver_searcher
+brew install watch
+brew install watchman
+brew install wget
+brew install --cask vagrant
+brew install vim
+brew install --cask virtualbox
+brew install yarn
+brew install --cask zoomus
+
+brew tap hashicorp/tap
+brew install hashicorp/tap/boundary
+brew install hashicorp/tap/consul
+brew install hashicorp/tap/nomad
+brew install hashicorp/tap/packer
+brew install hashicorp/tap/terraform
+brew install hashicorp/tap/vault
+brew install hashicorp/tap/waypoint
+
+brew tap mike-engel/jwt-cli
+brew install jwt-cli
+
+brew tap fwartner/tap
+brew install fwartner/tap/mac-cleanup
+
+brew cleanup --force
+rm -f -r /Library/Caches/Homebrew/*
+```
+
+### Install Any Remaining Commonly Used Tools and Apps
+
+[link](https://cloud.google.com/sdk/docs/quickstart-macos)
+
+```bash
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-339.0.0-darwin-x86_64.tar.gz
+tar xf google-cloud-sdk-339.0.0-darwin-x86_64.tar.gz
+cd google-cloud-sdk/
+./install.sh
+gcloud init
+```
+
 ## Install Commonly Used Mac Apps
 
 ```bash
@@ -69,106 +166,6 @@ Create a local directory to store any cloned repos into. Download this repo, so 
 mkdir -p ~/src/github.com/dahlke
 cd ~/src/github.com/dahlke
 git clone git@github.com:dahlke/eklhad-config.git
-```
-
-## `brew`
-
-### Install `brew`
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-```
-
-### Update `brew`
-
-```bash
-brew update
-```
-
-### Install Commonly Used Tools and Apps via `brew`
-
-```bash
-brew install --cask 1password
-brew install --cask 1password-cli
-brew install aliyun-cli
-brew install autojump
-brew install azure-cli
-brew install awscli
-brew install csshx
-brew install driftctl
-brew install eksctl
-brew install --cask evernote
-brew install --cask gimp
-brew install go
-brew install --cask google-chrome
-brew install --cask google-drive
-brew install graphviz
-brew install --cask graphql-playground
-brew install helm
-brew install htop
-brew install --cask istat-menus
-brew install --cask iterm2
-brew install jenv
-brew install jq
-brew install --cask keybase
-brew install kubernetes-cli
-brew install maven
-brew install --cask macdown
-brew install minikube
-brew install nmap
-brew install node
-brew install --cask nordvpn
-brew install pandoc
-brew install --cask postman
-brew install --cask pgadmin4
-brew install postgresql
-brew install python
-brew install --cask slack
-brew install socat
-brew install --cask spotify
-brew install --cask steam
-brew install --cask sublime-text
-brew install the_silver_searcher
-brew install tldr
-brew install tmux
-brew install watch
-brew install watchman
-brew install wget
-brew install --cask vagrant
-brew install vim
-brew install --cask virtualbox
-brew install yarn
-brew install --cask zoomus
-
-brew tap hashicorp/tap
-brew install hashicorp/tap/boundary
-brew install hashicorp/tap/consul
-brew install hashicorp/tap/nomad
-brew install hashicorp/tap/packer
-brew install hashicorp/tap/terraform
-brew install hashicorp/tap/vault
-brew install hashicorp/tap/waypoint
-
-brew tap mike-engel/jwt-cli
-brew install jwt-cli
-
-brew tap fwartner/tap
-brew install fwartner/tap/mac-cleanup
-
-brew cleanup --force
-rm -f -r /Library/Caches/Homebrew/*
-```
-
-### Install Any Remaining Commonly Used Tools and Apps
-
-[link](https://cloud.google.com/sdk/docs/quickstart-macos)
-
-```bash
-wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-339.0.0-darwin-x86_64.tar.gz
-tar xf google-cloud-sdk-339.0.0-darwin-x86_64.tar.gz
-cd google-cloud-sdk/
-./install.sh
-gcloud init
 ```
 
 ## `zsh`
