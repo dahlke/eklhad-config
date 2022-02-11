@@ -96,12 +96,6 @@ alias k='kubectl'
 ########
 # Google
 ########
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/neil/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/neil/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/neil/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/neil/google-cloud-sdk/completion.zsh.inc'; fi
-
 
 ##########
 # HashiCorp
@@ -131,7 +125,22 @@ alias -s {cs,js,html}=code
 ########
 # Java (yuck) helpers
 ########
-#
 ## jenv management
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+alias vault_1='VAULT_UI=true VAULT_REDIRECT_ADDR=http://127.0.0.1:8200 vault-ent server -log-level=trace -dev -dev-root-token-id=root -dev-listen-address=127.0.0.1:8200 -dev-ha -dev-transactional'
+alias vault_2='VAULT_UI=true VAULT_REDIRECT_ADDR=http://127.0.0.1:8202 vault-ent server -log-level=trace -dev -dev-root-token-id=root -dev-listen-address=127.0.0.1:8202 -dev-ha -dev-transactional'
+alias vault_3='VAULT_UI=true VAULT_REDIRECT_ADDR=http://127.0.0.1:8204 vault-ent server -log-level=trace -dev -dev-root-token-id=root -dev-listen-address=127.0.0.1:8204 -dev-ha -dev-transactional'
+
+# NOTE: `~/.terraform.d/credentials.tfrc.json` must be up to date, and any workspaces added.
+alias awstfcpush='doormat --smoke-test || doormat -r && doormat aws -a se_demos_dev --tf-push --tf-organization hc-se-tfe-demo-neil --tf-workspace AWS-PROD-two-tier-tfc-demo-app,AWS-PROD-two-tier-tfc-demo-app-2'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/neil/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/neil/Desktop/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/neil/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/neil/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/boundary boundary
