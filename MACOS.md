@@ -65,9 +65,9 @@ brew install --cask istat-menus
 brew install --cask iterm2
 brew install jenv
 brew install jq
-brew install --cask keybase
+# brew install --cask keybase
 brew install kubernetes-cli
-brew install maven
+# brew install maven
 brew install --cask macdown
 brew install minikube
 brew install nmap
