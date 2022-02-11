@@ -51,7 +51,7 @@ brew install azure-cli
 brew install awscli
 brew install csshx
 brew install driftctl
-brew install eksctl
+# brew install eksctl
 brew install --cask evernote
 # brew install --cask gimp
 brew install go
@@ -70,7 +70,7 @@ brew install kubernetes-cli
 # brew install maven
 brew install --cask macdown
 brew install minikube
-brew install nmap
+# brew install nmap
 brew install node
 # brew install --cask nordvpn
 brew install --cask postman
@@ -78,7 +78,7 @@ brew install --cask pgadmin4
 brew install postgresql
 brew install python
 brew install --cask slack
-brew install socat
+# brew install socat
 brew install --cask spotify
 brew install --cask steam
 brew install --cask sublime-text
@@ -89,7 +89,7 @@ brew install wget
 brew install --cask vagrant
 brew install vim
 brew install --cask virtualbox
-brew install yarn
+# brew install yarn
 brew install --cask zoomus
 
 brew tap hashicorp/tap
@@ -131,9 +131,6 @@ open https://apps.apple.com/us/app/24-hour-wallpaper/id1226087575?mt=12
 
 # Docker for Mac
 open https://docs.docker.com/docker-for-mac/install/
-
-# Evernote
-open https://apps.apple.com/us/app/evernote/id406056744?mt=12
 
 # Instruqt CLI
 open https://github.com/instruqt/cli/releases
