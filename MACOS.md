@@ -10,6 +10,22 @@ This is the first step since it will help with syncing all of the settings that 
 xcode-select --install
 ```
 
+## `zsh`
+
+### Install `zsh`
+
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Set `zsh` as default shell, create expected files
+
+```bash
+chsh -s /usr/local/bin/zsh
+mkdir ~/.zsh
+touch ~/.zsh/config
+```
+
 ## `brew`
 
 ### Install `brew`
@@ -166,22 +182,6 @@ Create a local directory to store any cloned repos into. Download this repo, so 
 mkdir -p ~/src/github.com/dahlke
 cd ~/src/github.com/dahlke
 git clone git@github.com:dahlke/eklhad-config.git
-```
-
-## `zsh`
-
-### Install `zsh`
-
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-### Set `zsh` as default shell, create expected files
-
-```bash
-chsh -s /usr/local/bin/zsh
-mkdir ~/.zsh
-touch ~/.zsh/config
 ```
 
 ## `vim`
