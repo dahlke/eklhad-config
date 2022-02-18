@@ -46,10 +46,11 @@ brew update
 brew install --cask 1password
 brew install --cask 1password-cli
 brew install aliyun-cli
-# brew install autojump
+brew install autojump
 brew install azure-cli
 brew install awscli
 brew install csshx
+brew install --cask discord
 brew install driftctl
 # brew install eksctl
 brew install --cask evernote
@@ -193,15 +194,11 @@ vim
 # :BundleInstall
 ```
 
-## VSCode
+## VS Code
 
 - [Turn on Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)
   - Manage -> Turn on Preferences Sync
-
-- Allow `vim` to yank to clipboard
-  - File -> Preferences -> Extensions -> Click "useSystemClipboard"
-- Remove Trailing Whitespace on Save
-  - File -> Preferences -> Settings -> User Settings -> `"files.trimTrailingWhitespace": true`
+  - Allow the preferences to sync
 
 ### Allow press and hold in VSCode since I use the `vim` extension
 
@@ -211,7 +208,7 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 ```
 
-### Install VSCode Extensions
+### Install VSCode Extensions (not required if use Settings Sync)
 
 ```bash
 # Docker
@@ -296,7 +293,7 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 ## iTerm2
 
-iTerm -> General -> Preferences -> Load Preferences from (“`/.iterm”).
+iTerm -> General -> Preferences -> Load Preferences from `/.iterm`.
 
 ## Credentials
 
