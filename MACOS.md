@@ -70,8 +70,9 @@ brew install jq
 brew install kubernetes-cli
 # brew install maven
 brew install --cask macdown
+brew install --cask microsoft-teams
 brew install minikube
-# brew install nmap
+brew install nmap
 brew install node
 # brew install --cask nordvpn
 brew install --cask obs
@@ -80,13 +81,14 @@ brew install --cask pgadmin4
 brew install postgresql
 brew install python
 brew install --cask slack
-# brew install socat
+brew install socat
 brew install --cask spotify
-# brew install --cask steam
+brew install --cask steam
 brew install --cask sublime-text
 brew install the_silver_searcher
 brew install watch
 brew install watchman
+brew install --cask webex
 brew install wget
 brew install --cask vagrant
 brew install vim
@@ -142,8 +144,8 @@ open https://github.com/instruqt/cli/releases
 # Magnet
 open https://apps.apple.com/us/app/magnet/id441258766?mt=12
 
-# VS Code
-https://code.visualstudio.com/insiders/
+# VS Code Insiders
+open https://code.visualstudio.com/insiders/
 ```
 
 ## Log Into 1Password
@@ -283,6 +285,13 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
     - Modifier Keys -> Microsoft Nano Tranceiver -> (Option = Command, Command = Option)
   - Shortcuts
     - Enable: Use keyboard navigation to move focus between controls
+    - All Applications
+      - Lock Screen = `Option + Command + L`
+    - Mission Control
+      - Show Desktop = `Shift + Command + \`
+    - App Shortcuts
+      - "Messages -> Delete Conversation..." = `Shift + Command + D`
+      - "iTerm -> Clear Buffer" = `Command + E`
 - Trackpad
   - Disable: Scroll direction natural -> disable
   - Enable: Zoom in or out -> pinch with two fingers
@@ -294,7 +303,33 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 ## iTerm2
 
-iTerm -> General -> Preferences -> Load Preferences from `/.iterm`.
+### Load the Personal Profile
+
+- iTerm
+  - General
+    - Preferences
+      - Load Preferences from `./collected/eklhad_iterm.json`
+
+### Setup Appearance
+
+- iTerm
+  - Appearance
+    - General
+      - Theme = Dark
+      - Tab bar = Top
+      - Status bar = Top
+      - General Auto-Hide menu bar in non-native fullscreen
+
+### Setup Key Bindings
+
+- iTerm -> Keys -> Select Split Plane on Left = `Command + H`
+- iTerm -> Keys -> Select Split Plane on Right = `Command + H`
+- iTerm -> Keys -> Select Split Plane Above = `Command + K`
+- iTerm -> Keys -> Select Split Plane Below = `Command + J`
+
+## Removed Unused Mac Apps
+
+At this stage, start to remove the applications that you will not use as they are just clutter.
 
 ## Credentials
 
