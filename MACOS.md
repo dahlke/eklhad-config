@@ -322,10 +322,38 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 ### Setup Key Bindings
 
-- iTerm -> Keys -> Select Split Plane on Left = `Command + H`
-- iTerm -> Keys -> Select Split Plane on Right = `Command + H`
-- iTerm -> Keys -> Select Split Plane Above = `Command + K`
-- iTerm -> Keys -> Select Split Plane Below = `Command + J`
+- iTerm
+  - Keys
+    - Select Split Plane on Left = `Command + H`
+    - Select Split Plane on Right = `Command + H`
+    - Select Split Plane Above = `Command + K`
+    - Select Split Plane Below = `Command + J`
+
+## Magnet
+
+- Magnet
+  - Preferences
+    - Left = `Shift + Command + H`
+    - Right = `Shift + Command + L`
+    - Up = `Shift + Command + K`
+    - Down = `Shift + Command + J`
+    - Left Third = `Shift + Command + 1`
+    - Center Third = `Shift + Command + 2`
+    - Right Third = `Shift + Command + 3`
+    - Next Display = `Control + Shift + Command + 1`
+    - Previous Display = `Control + Shift + Command + 1`
+    - Maximize = `Shift + Command + M`
+    - Enable launch on login
+
+## Messages
+
+Be sure to setup [text message forwarding](https://support.apple.com/en-us/HT208386) from iPhone.
+
+## iStat Menus
+
+Apply the license from email, and then enable: Notifications, CPU & CPU, Memory, Disks, Network and Battery/Power. Start on bootup.
+
+-
 
 ## Removed Unused Mac Apps
 
@@ -375,12 +403,6 @@ export SMTP_PASSWORD=$(op get item Sendgrid | jq -r '.details.sections[1].fields
 
 ```bash
 export INSTAGRAM_ACCESS_TOKEN=$(op get item Instagram | jq -r '.details.sections[1].fields[0].v')
-```
-
-#### Set Personal NYTimes Creds
-
-```bash
-export NYT_TOKEN=$(op get item "NYTimes Developer" | jq -r '.details.sections[0].fields[0].v')
 ```
 
 #### Set Personal GitHub Creds
