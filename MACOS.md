@@ -58,6 +58,7 @@ brew install --cask evernote
 brew install go
 brew install --cask google-chrome
 brew install --cask google-drive
+brew install grafana
 brew install graphviz
 brew install --cask graphql-playground
 brew install helm
@@ -89,6 +90,7 @@ brew install the_silver_searcher
 brew install watch
 brew install watchman
 brew install --cask webex
+brew install wrk
 brew install wget
 brew install --cask vagrant
 brew install vim
