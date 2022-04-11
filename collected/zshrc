@@ -144,3 +144,7 @@ if [ -f '/Users/neil/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Us
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/boundary boundary
+
+# Issues with Puppeteer on MBP w/ Apple Silicon (M1)
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium
