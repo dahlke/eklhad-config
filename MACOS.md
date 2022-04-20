@@ -1,4 +1,4 @@
-# Provisioning a macOS Machine (To My Preferences) eteps
+# Provisioning a macOS Machine (To My Preferences) Steps
 
 ## Log Into iCloud
 
