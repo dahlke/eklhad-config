@@ -77,7 +77,6 @@ brew install minikube
 brew install nmap
 brew install node
 # brew install --cask nordvpn
-brew install --cask obs
 brew install --cask postman
 brew install --cask pgadmin4
 brew install postgresql
