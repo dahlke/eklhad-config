@@ -228,6 +228,9 @@ open https://code.visualstudio.com/docs/languages/go
 # GraphQL
 open https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql
 
+# HashiCorp Configuration Language
+https://marketplace.visualstudio.com/items?itemName=HashiCorp.HCL
+
 # HashiCorp Terraform
 open https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform
 
@@ -305,6 +308,9 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 - Mouse
   - Disable: Scroll direction natural
   - Enable: Secondary click -> Click on the right side
+- Notifications
+  - Facetime
+    - Disable: Play sound for notifications
 
 ## iTerm2
 
