@@ -59,6 +59,7 @@ brew install --cask evernote
 brew install go
 brew install --cask google-chrome
 brew install --cask google-drive
+brew install gpg
 brew install grafana
 brew install graphviz
 brew install --cask graphql-playground
@@ -68,7 +69,7 @@ brew install --cask istat-menus
 brew install --cask iterm2
 brew install jenv
 brew install jq
-# brew install --cask keybase
+brew install --cask keybase
 brew install kubernetes-cli
 # brew install maven
 brew install --cask macdown
@@ -130,6 +131,13 @@ gcloud init
 cd ../
 rm -rf google-cloud-sdk-372.0.0-darwin-x86_64.tar.gz
 ```
+
+Install [`golint`](https://pkg.go.dev/golang.org/x/lint/golint).
+
+```bash
+go get -u golang.org/x/lint/golint
+```
+
 
 ## Install Commonly Used Mac Apps
 
