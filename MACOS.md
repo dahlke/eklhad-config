@@ -305,6 +305,7 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
     - App Shortcuts
       - "Messages -> Delete Conversation..." = `Shift + Command + D`
       - "iTerm -> Clear Buffer" = `Command + E`
+      - "Google Chrome -> Pin Tab" = `Shift + Command + X`
     - Screenshots
       - Disable Save picture of screen as file
       - Disable Copy picture of screen to the clipboard
