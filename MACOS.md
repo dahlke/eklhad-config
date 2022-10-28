@@ -82,6 +82,7 @@ brew install --cask postman
 brew install --cask pgadmin4
 brew install postgresql
 brew install python
+brew install --cask signal
 brew install --cask slack
 brew install socat
 brew install --cask spotify
@@ -305,7 +306,7 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
     - App Shortcuts
       - "Messages -> Delete Conversation..." = `Shift + Command + D`
       - "iTerm -> Clear Buffer" = `Command + E`
-      - "Google Chrome -> Pin Tab" = `Shift + Command + X`
+      - "Google Chrome -> Pin Tab" = `Shift + Command + nX`
     - Screenshots
       - Disable Save picture of screen as file
       - Disable Copy picture of screen to the clipboard
