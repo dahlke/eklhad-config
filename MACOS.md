@@ -97,6 +97,7 @@ brew install wget
 brew install --cask vagrant
 brew install vim
 brew install --cask virtualbox
+brew install --cask vlc
 # brew install yarn
 brew install --cask zoom
 
