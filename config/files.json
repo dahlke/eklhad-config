@@ -17,6 +17,10 @@
             "dst": "./%s/vimrc"
         },
         {
+            "src": "~/.pypirc",
+            "dst": "./%s/pypirc"
+        },
+        {
             "src": "~/.iterm/com.googlecode.iterm2.plist",
             "dst": "./%s/com.googlecode.iterm2.plist"
         },

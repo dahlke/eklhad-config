@@ -1,0 +1,13 @@
+[distutils]
+  index-servers =
+    pypi
+    terrasnek
+
+[pypi]
+  username = __token__
+  password = pypi-XXX
+
+[terrasnek]
+  repository = https://upload.pypi.org/legacy/
+  username = __token__
+  password = pypi-XXX
