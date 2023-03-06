@@ -49,6 +49,7 @@ brew install aliyun-cli
 brew install autojump
 brew install azure-cli
 brew install awscli
+brew install --cask microsoft-edge
 brew install chromium
 brew install csshx
 brew install --cask discord
