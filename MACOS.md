@@ -160,6 +160,9 @@ open https://support.logi.com/hc/en-us/articles/360024361233
 # Magnet
 open https://apps.apple.com/us/app/magnet/id441258766?mt=12
 
+# Remote Play
+open https://remoteplay.dl.playstation.net/remoteplay/lang/en/ps5_mac.html
+
 # VS Code Insiders
 open https://code.visualstudio.com/insiders/
 ```
