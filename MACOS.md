@@ -71,6 +71,7 @@ brew install --cask iterm2
 brew install jenv
 brew install jq
 brew install --cask keybase
+brew install kind
 brew install kubernetes-cli
 # brew install maven
 brew install --cask macdown
