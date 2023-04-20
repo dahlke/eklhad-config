@@ -52,6 +52,7 @@ brew install awscli
 brew install --cask microsoft-edge
 brew install chromium
 brew install csshx
+brew install derailed/k9s/k9s
 brew install --cask discord
 brew install driftctl
 # brew install eksctl
