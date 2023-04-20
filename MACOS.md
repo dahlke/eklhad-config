@@ -54,7 +54,6 @@ brew install chromium
 brew install csshx
 brew install derailed/k9s/k9s
 brew install --cask discord
-brew install driftctl
 # brew install eksctl
 brew install --cask evernote
 # brew install --cask gimp
