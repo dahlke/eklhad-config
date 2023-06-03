@@ -111,6 +111,7 @@ brew install hashicorp/tap/packer
 brew install hashicorp/tap/terraform
 brew install hashicorp/tap/vault
 brew install hashicorp/tap/waypoint
+brew install vlt
 
 brew tap mike-engel/jwt-cli
 brew install jwt-cli
