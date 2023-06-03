@@ -57,6 +57,7 @@ brew install --cask discord
 # brew install eksctl
 brew install --cask evernote
 # brew install --cask gimp
+brew install gh
 brew install go
 brew install --cask google-chrome
 brew install --cask google-drive
