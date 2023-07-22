@@ -73,10 +73,20 @@ alias gim='git merge'
 alias gib='git branch'
 alias gir='git rebase -i'
 alias gish='git stash'
-function gac() {
-    git add .
-    git commit -a -m "$1"
-    git push
+gac() {
+  if [[ -z "$1" ]]; then
+    echo "Error: Please provide a commit message."
+    return 1
+  fi
+
+  if [[ -z "$2" ]]; then
+    echo "Error: Please provide a branch name."
+    return 1
+  fi
+
+  git add .
+  git commit -m "$1"
+  git push origin "$2"
 }
 
 
