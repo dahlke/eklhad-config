@@ -56,6 +56,7 @@ brew install derailed/k9s/k9s
 brew install --cask discord
 # brew install eksctl
 brew install --cask evernote
+brew install fig
 # brew install --cask gimp
 brew install gh
 brew install go
@@ -92,6 +93,8 @@ brew install --cask spotify
 brew install --cask steam
 brew install --cask sublime-text
 brew install the_silver_searcher
+brew install temporal
+brew install --cask qflipper
 brew install watch
 brew install watchman
 brew install --cask webex
@@ -545,6 +548,7 @@ npm-check-updates -u
 npm install
 
 npm install -g depcheck
+npx install
 ```
 
 ### `pip3`
