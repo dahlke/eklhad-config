@@ -49,7 +49,8 @@ brew install aliyun-cli
 brew install autojump
 brew install azure-cli
 brew install awscli
-brew install --cask microsoft-edge
+brew install caddy
+brew install --cask chatgpt
 brew install chromium
 brew install csshx
 brew install derailed/k9s/k9s
@@ -77,6 +78,7 @@ brew install kind
 brew install kubernetes-cli
 # brew install maven
 brew install --cask macdown
+brew install --cask microsoft-edge
 brew install --cask microsoft-teams
 brew install minikube
 brew install nmap
