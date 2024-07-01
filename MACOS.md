@@ -153,23 +153,14 @@ go get -u golang.org/x/lint/golint
 ## Install Commonly Used Mac Apps
 
 ```bash
-# 24 Hour Wallpaper
-open https://apps.apple.com/us/app/24-hour-wallpaper/id1226087575?mt=12
-
 # Docker for Mac
 open https://docs.docker.com/docker-for-mac/install/
-
-# Instruqt CLI
-open https://github.com/instruqt/cli/releases
 
 # LogiTune
 open https://support.logi.com/hc/en-us/articles/360024361233
 
 # Magnet
 open https://apps.apple.com/us/app/magnet/id441258766?mt=12
-
-# Remote Play
-open https://remoteplay.dl.playstation.net/remoteplay/lang/en/ps5_mac.html
 
 # VS Code Insiders
 open https://code.visualstudio.com/insiders/
@@ -183,8 +174,8 @@ Log into the 1Password UI, both work and personal vaults. This will make logging
 op signin my.1password.com neil.dahlke@gmail.com
 eval $(op signin my)
 
-op signin hashicorp.1password.com neil@hashicorp.com
-eval $(op signin hashicorp)
+op signin team-temporal.1password.com neil.dahlke@temporal.io
+eval $(op signin temporal)
 ```
 
 ## Log Into Chrome
@@ -221,7 +212,7 @@ git clone git@github.com:dahlke/eklhad-config.git
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim
-# :BundleInstall
+# :PluginInstall
 ```
 
 ## VS Code
@@ -384,7 +375,7 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 ## Messages
 
-Be sure to setup [text message forwarding](https://support.apple.com/en-us/HT208386) from iPhone.
+Be sure to setup [text message forwarding](https://support.apple.com/en-us/HT208386) from iPhone. Turn off the sounds.
 
 ## iStat Menus
 
@@ -514,20 +505,6 @@ az login
 ```bash
 export TFC_URL="https://app.terraform.io"
 export TFC_TOKEN=$(op get item "Terraform Cloud" | jq -r '.details.sections[1].fields[0].v')
-```
-
-#### Set Work TFE Creds
-
-```bash
-export TFC_URL="<TFE_URL>"
-export TFC_TOKEN="<TFE_TOKEN>"
-```
-
-#### Set Work Local Vault Creds
-
-```bash
-export VAULT_ADDR="http://localhost:8200"
-export VAULT_TOKEN="root"
 ```
 
 ## Other
