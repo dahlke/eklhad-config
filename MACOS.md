@@ -284,21 +284,18 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 ## System Preferences
 
-- General
+- Appearance
   - Appearance -> Auto
   - Sidebar icon size -> Small
   - Show scroll bars -> When Scrolling
-  - Default web browser -> Google Chrome
-- Desktop and Screen Saver
-  - Hot Corners -> Lock Screen (bottom right corner)
-- Dock
+- Desktop and Dock
   - Small size
   - No magnification
   - Minimize windows using -> Scale effect
   - Automatically hide and show the Dock
+  - Default web browser -> Google Chrome
 - Displays
-  - Configure ultra-wide screen above laptop screen
-  - Laptop screen main display
+  - Configure external monitors
 - Keyboard
   - Keyboard
     - Key repeat -> Fast
@@ -313,15 +310,12 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
     - App Shortcuts
       - "Messages -> Delete Conversation..." = `Shift + Command + D`
       - "iTerm -> Clear Buffer" = `Command + E`
-      - "Google Chrome -> Pin Tab" = `Shift + Command + nX`
     - Screenshots
       - Disable Save picture of screen as file
       - Disable Copy picture of screen to the clipboard
 - Trackpad
   - Disable: Scroll direction natural -> disable
-  - Enable: Zoom in or out -> pinch with two fingers
   - Enable: Smart zoom -> double-tap with two fingers
-  - Enable: Rotate -> rotate with two fingers
 - Mouse
   - Disable: Scroll direction natural
   - Enable: Secondary click -> Click on the right side
@@ -375,7 +369,7 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 ## Messages
 
-Be sure to setup [text message forwarding](https://support.apple.com/en-us/HT208386) from iPhone. Turn off the sounds.
+Be sure to setup [text message forwarding](https://support.apple.com/en-us/HT208386) from iPhone, and disable sound effects.
 
 ## iStat Menus
 
@@ -418,21 +412,6 @@ export CLOUDFLARE_API_KEY=$(op get item Cloudflare | jq -r '.details.sections[1]
 export CODECOV_TOKEN=$(op get item CodeCov | jq -r '.details.sections[1].fields[0].v')
 ```
 
-#### Set Personal Sendgrid (SMTP) Creds
-
-```bash
-export SMTP_HOST=$(op get item Sendgrid | jq -r '.details.sections[1].fields[0].v')
-export SMTP_PORT=$(op get item Sendgrid | jq -r '.details.sections[1].fields[1].v')
-export SMTP_USERNAME=$(op get item Sendgrid | jq -r '.details.sections[1].fields[2].v')
-export SMTP_PASSWORD=$(op get item Sendgrid | jq -r '.details.sections[1].fields[3].v')
-```
-
-#### Set Personal Instagram Creds
-
-```bash
-export INSTAGRAM_ACCESS_TOKEN=$(op get item Instagram | jq -r '.details.sections[1].fields[0].v')
-```
-
 #### Set Personal GitHub Creds
 
 ```bash
@@ -458,53 +437,6 @@ export TFC_TOKEN=$(op get item "Terraform Cloud" | jq -r '.details.sections[1].f
 
 ```bash
 export GOOGLE_CREDENTIALS=$(op get item "Google dahlke.io" | jq -r '.details.sections[1].fields[0].v' | jq -r .)
-```
-
-### Work Vault
-
-#### Log into 1Password Work Vault
-
-```bash
-eval $(op signin hashicorp)
-```
-
-#### Set Work AWS Creds
-
-```bash
-export AWS_ACCESS_KEY_ID=$(op get item Amazon | jq -r '.details.sections[1].fields[0].v')
-export AWS_SECRET_ACCESS_KEY=$(op get item Amazon | jq -r '.details.sections[1].fields[1].v')
-```
-
-#### Set Work Alibaba Cloud Creds
-
-```bash
-export ALICLOUD_ACCESS_KEY=$(op get item "Alibaba Cloud" | jq -r '.details.sections[1].fields[0].v')
-export ALICLOUD_SECRET_KEY=$(op get item "Alibaba Cloud" | jq -r '.details.sections[1].fields[1].v')
-```
-
-#### Set Work Azure Creds
-
-```bash
-# TODO
-export ARM_CLIENT_ID=""
-export ARM_CLIENT_SECRET=""
-export ARM_SUBSCRIPTION_ID=""
-export ARM_TENANT_ID=""
-az login
-```
-
-#### Set Work GCP Creds
-
-```bash
-# TODO
-# https://console.cloud.google.com/apis/credentials?project=eklhad-web&organizationId=620944270908
-```
-
-#### Set Work TFC Creds
-
-```bash
-export TFC_URL="https://app.terraform.io"
-export TFC_TOKEN=$(op get item "Terraform Cloud" | jq -r '.details.sections[1].fields[0].v')
 ```
 
 ## Other
