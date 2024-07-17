@@ -109,17 +109,6 @@ alias k='kubectl'
 
 
 ########
-# Google
-########
-
-##########
-# HashiCorp
-##########
-export CONSUL_HELM_PATH=~/src/github.com/hashicorp/consul-helmexport PATH="/usr/local/opt/openssl/bin:$PATH"
-export PATH=/Users/neil/src/github.com/hashicorp-community/tf-helper/tfh/bin:$PATH
-
-
-########
 # Common Aliases
 ########
 alias todo="ag TODO"
@@ -130,6 +119,7 @@ alias todo="ag TODO"
 ########
 function killport() { lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9 }
 
+
 ########
 # Suffix Aliases
 ########
@@ -137,16 +127,16 @@ alias -s md=code
 alias -s json=code
 alias -s {cs,js,html}=code
 
+
 ########
-# Java (yuck) helpers
+# Java helpers
 ########
 ## jenv management
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
-alias vault_1='VAULT_UI=true VAULT_REDIRECT_ADDR=http://127.0.0.1:8200 vault-ent server -log-level=trace -dev -dev-root-token-id=root -dev-listen-address=127.0.0.1:8200 -dev-ha -dev-transactional'
-alias vault_2='VAULT_UI=true VAULT_REDIRECT_ADDR=http://127.0.0.1:8202 vault-ent server -log-level=trace -dev -dev-root-token-id=root -dev-listen-address=127.0.0.1:8202 -dev-ha -dev-transactional'
-alias vault_3='VAULT_UI=true VAULT_REDIRECT_ADDR=http://127.0.0.1:8204 vault-ent server -log-level=trace -dev -dev-root-token-id=root -dev-listen-address=127.0.0.1:8204 -dev-ha -dev-transactional'
+# Add Java Home
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # NOTE: `~/.terraform.d/credentials.tfrc.json` must be up to date, and any workspaces added.
 alias awstfcpush='doormat --smoke-test || doormat -r && doormat aws -a se_demos_dev --tf-push --tf-organization hc-se-tfe-demo-neil --tf-workspace AWS-PROD-two-tier-tfc-demo-app,AWS-PROD-two-tier-tfc-demo-app-2'
@@ -154,13 +144,22 @@ alias awstfcpush='doormat --smoke-test || doormat -r && doormat aws -a se_demos_
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/boundary boundary
 
+
+########
+# Google
+########
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+########
+# Extra
+########
+
 # Issues with Puppeteer on MBP w/ Apple Silicon (M1)
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/neildahlke/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/neildahlke/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/neildahlke/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/neildahlke/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

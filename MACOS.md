@@ -94,6 +94,8 @@ brew install socat
 brew install --cask spotify
 brew install --cask steam
 brew install --cask sublime-text
+brew install tctl
+brew install tcld
 brew install the_silver_searcher
 brew install temporal
 brew install --cask qflipper
@@ -133,8 +135,8 @@ rm -f -r /Library/Caches/Homebrew/*
 _TODO: use a variable for the version. Need to log in to complete the init._
 
 ```bash
-wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-372.0.0-darwin-x86_64.tar.gz
-tar xf google-cloud-sdk-372.0.0-darwin-x86_64.tar.gz
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-darwin-x86_64.tar.gz
+tar xf google-cloud-cli-darwin-x86_64.tar.gz
 cd google-cloud-sdk/
 ./install.sh
 source ~/.zshrc
