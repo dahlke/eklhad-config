@@ -50,6 +50,7 @@ brew install autojump
 brew install azure-cli
 brew install awscli
 brew install caddy
+brew install certstrap
 brew install --cask chatgpt
 brew install chromium
 brew install csshx
@@ -64,6 +65,7 @@ brew install go
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install gpg
+brew install gradle
 brew install grafana
 brew install graphviz
 brew install --cask graphql-playground
