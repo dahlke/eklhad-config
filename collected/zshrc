@@ -138,9 +138,6 @@ eval "$(jenv init -)"
 # Add Java Home
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-# NOTE: `~/.terraform.d/credentials.tfrc.json` must be up to date, and any workspaces added.
-alias awstfcpush='doormat --smoke-test || doormat -r && doormat aws -a se_demos_dev --tf-push --tf-organization hc-se-tfe-demo-neil --tf-workspace AWS-PROD-two-tier-tfc-demo-app,AWS-PROD-two-tier-tfc-demo-app-2'
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/boundary boundary
 

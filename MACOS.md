@@ -96,8 +96,6 @@ brew install socat
 brew install --cask spotify
 brew install --cask steam
 brew install --cask sublime-text
-brew install tctl
-brew install tcld
 brew install the_silver_searcher
 brew install temporal
 brew install --cask qflipper
@@ -112,6 +110,11 @@ brew install --cask virtualbox
 brew install --cask vlc
 # brew install yarn
 brew install --cask zoom
+
+brew tap temporalio/brew
+brew install tctl
+brew install tcld
+brew install temporalio/brew/tcld
 
 brew tap hashicorp/tap
 brew install hashicorp/tap/boundary
@@ -152,6 +155,10 @@ Install [`golint`](https://pkg.go.dev/golang.org/x/lint/golint).
 ```bash
 go get -u golang.org/x/lint/golint
 ```
+
+### Java
+
+_Follow MacOS instructions [here](https://www.java.com/en/download/help/download_options.html)._
 
 
 ## Install Commonly Used Mac Apps
