@@ -86,8 +86,10 @@ brew install minikube
 brew install nmap
 brew install node
 # brew install --cask nordvpn
+brew install opa
 brew install --cask postman
 brew install --cask pgadmin4
+brew install pipx
 brew install postgresql
 brew install python
 brew install --cask signal
@@ -206,6 +208,13 @@ Create an SSH key for this new machine and add the output `id_rsa.pub` to [GitHu
 ```bash
 cd ~/.ssh
 ssh-keygen
+```
+
+Set up the standard Git user data.
+
+```bash
+git config --global user.email neil.dahlke@gmail.com
+git config --global user.name "Neil Dahlke"
 ```
 
 Create a local directory to store any cloned repos into. Download this repo, so we have a local copy going forward.
@@ -479,4 +488,25 @@ Install any important global `python3` dependencies.
 
 ```bash
 pip3 install virtualenv
+```
+
+### `pipx`
+
+```bash
+pipx ensurepath
+sudo pipx ensurepath --global # optional to allow pipx actions with --global argument
+```
+
+
+### `poetry`
+
+```bash
+pipx install poetry
+pipx upgrade poetry
+```
+
+```bash
+poetry completions zsh > ~/.zfunc/_poetry
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 ```

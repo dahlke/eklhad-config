@@ -38,6 +38,9 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 # Add Visual Studio Code (code) to PATH
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# Add Java Home
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 
 ########
 # Unix
@@ -108,6 +111,13 @@ alias code='code-insiders'
 alias k='kubectl'
 
 
+##########
+# HashiCorp
+##########
+export CONSUL_HELM_PATH=~/src/github.com/hashicorp/consul-helmexport PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH=/Users/neil/src/github.com/hashicorp-community/tf-helper/tfh/bin:$PATH
+
+
 ########
 # Common Aliases
 ########
@@ -119,7 +129,6 @@ alias todo="ag TODO"
 ########
 function killport() { lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9 }
 
-
 ########
 # Suffix Aliases
 ########
@@ -127,23 +136,22 @@ alias -s md=code
 alias -s json=code
 alias -s {cs,js,html}=code
 
-
 ########
-# Java helpers
+# Java (yuck) helpers
 ########
 ## jenv management
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
-# Add Java Home
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/boundary boundary
 
+# Issues with Puppeteer on MBP w/ Apple Silicon (M1)
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
 ########
-# Google
+# Google Cloud
 ########
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -152,11 +160,12 @@ if [ -f '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/path.zs
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/completion.zsh.inc'; fi
 
-
 ########
-# Extra
+# pipx and poetry
 ########
+# Created by `pipx` on 2024-07-30 17:10:21
+export PATH="$PATH:/Users/neildahlke/.local/bin"
 
-# Issues with Puppeteer on MBP w/ Apple Silicon (M1)
-export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
+
