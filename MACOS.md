@@ -79,7 +79,6 @@ brew install --cask keybase
 brew install kind
 brew install kubernetes-cli
 # brew install maven
-brew install --cask macdown
 brew install --cask microsoft-edge
 brew install --cask microsoft-teams
 brew install minikube
