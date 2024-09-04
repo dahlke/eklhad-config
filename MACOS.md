@@ -78,7 +78,7 @@ brew install jq
 brew install --cask keybase
 brew install kind
 brew install kubernetes-cli
-# brew install maven
+brew install maven
 brew install --cask microsoft-edge
 brew install --cask microsoft-teams
 brew install minikube
@@ -99,6 +99,7 @@ brew install --cask steam
 brew install --cask sublime-text
 brew install the_silver_searcher
 brew install temporal
+brew install tree
 brew install --cask qflipper
 brew install watch
 brew install watchman
