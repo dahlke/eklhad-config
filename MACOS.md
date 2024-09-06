@@ -89,6 +89,7 @@ brew install opa
 brew install --cask postman
 brew install --cask pgadmin4
 brew install pipx
+brew install pnpm
 brew install postgresql
 brew install python
 brew install --cask signal
