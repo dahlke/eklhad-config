@@ -87,6 +87,7 @@ brew install nmap
 brew install node
 # brew install --cask nordvpn
 brew install opa
+brew install openjdk@17
 brew install openjdk@21
 brew install --cask postman
 brew install --cask pgadmin4
@@ -167,6 +168,7 @@ Symlink the version of Java that was installed via `brew` into the
 `/Library/Java/JavaVirtualMachines` directory.
 
 ```bash
+sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
 sudo ln -sfn $(brew --prefix openjdk@21)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
 ```
 
@@ -175,6 +177,10 @@ Update `JAVA_HOME` in your `~/.zshrc` file to use the OpenJDK version installed 
 ```bash
 echo "export JAVA_HOME=/usr/local/opt/openjdk" >> ~/.zshrc
 source ~/.zshrc
+```
+
+Many versions of the Java SDK are not available via `brew`, if you need a specific one that is not
+available through `brew`, follow [these instructions](https://www.java.com/en/download/help/download_options.html#mac).
 
 ## Install Commonly Used Mac Apps
 
