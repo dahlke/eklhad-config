@@ -36,8 +36,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 # Add specific OpenSSL to PATH
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-# Add Visual Studio Code (code) to PATH
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Add Java Home
 export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -111,6 +109,10 @@ alias d='docker'
 alias k='kubectl'
 
 
+########
+# Google
+########
+
 ##########
 # HashiCorp
 ##########
@@ -150,15 +152,13 @@ complete -o nospace -C /usr/local/bin/boundary boundary
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
-########
-# Google Cloud
-########
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/neildahlke/src/github.com/dahlke/eklhad/google-cloud-sdk/completion.zsh.inc'; fi
+
 
 ########
 # pipx and poetry
@@ -169,3 +169,6 @@ export PATH="$PATH:/Users/neildahlke/.local/bin"
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
+
+# omni shell integration
+eval "$(omni hook init zsh)"

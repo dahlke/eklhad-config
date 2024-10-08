@@ -59,7 +59,9 @@ brew install derailed/k9s/k9s
 brew install --cask discord
 # brew install eksctl
 brew install --cask evernote
+brew install ffmpeg
 brew install fig
+brew install gcc
 # brew install --cask gimp
 brew install gh
 brew install go
@@ -95,6 +97,7 @@ brew install pipx
 brew install pnpm
 brew install postgresql
 brew install python
+brew install rustup # rustup-init
 brew install --cask signal
 brew install --cask slack
 brew install socat
@@ -114,6 +117,7 @@ brew install --cask vagrant
 brew install vim
 brew install --cask virtualbox
 brew install --cask vlc
+brew install xaf/omni/omni
 # brew install yarn
 brew install --cask zoom
 
@@ -501,14 +505,6 @@ npm install -g depcheck
 npx install
 ```
 
-### `pip3`
-
-Install any important global `python3` dependencies.
-
-```bash
-pip3 install virtualenv
-```
-
 ### `pipx`
 
 ```bash
@@ -516,12 +512,13 @@ pipx ensurepath
 sudo pipx ensurepath --global # optional to allow pipx actions with --global argument
 ```
 
-
 ### `poetry`
 
 ```bash
 pipx install poetry
 pipx upgrade poetry
+pipx install virtualenv
+pipx upgrade virtualenv
 ```
 
 ```bash
