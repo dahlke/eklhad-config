@@ -172,3 +172,4 @@ autoload -Uz compinit && compinit
 
 # omni shell integration
 eval "$(omni hook init zsh)"
+

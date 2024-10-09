@@ -21,12 +21,8 @@
             "dst": "./%s/pypirc"
         },
         {
-            "src": "~/.iterm/com.googlecode.iterm2.plist",
+            "src": "~/Library/Preferences/com.googlecode.iterm2.plist",
             "dst": "./%s/com.googlecode.iterm2.plist"
-        },
-        {
-            "src": "~/.iterm/iterm_profile_colors.itermcolors",
-            "dst": "./%s/iterm_profile_colors.itermcolors"
         }
     ]
 }

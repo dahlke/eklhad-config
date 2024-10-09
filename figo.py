@@ -4,7 +4,9 @@ import argparse
 import plistlib
 import json
 import os
+import getpass
 
+# TODO: gather Cursor settings as well.
 COLLLECTED_PREFIX_DST = "collected"
 FILE_CONFIG_PATH = "config/files.json"
 
@@ -36,7 +38,9 @@ def apply(files):
         print(f['dst_abs_path'], 'copied to', f['src_abs_path'])
 
 def get_macos_sysprefs():
-    prefs_path = "/Users/neil/Library/Preferences/"
+    current_user = getpass.getuser()
+    print("Current User:", current_user)
+    prefs_path = f"/Users/{current_user}/Library/Preferences/"
 
     # TODO
     # General

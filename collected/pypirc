@@ -11,3 +11,4 @@
   repository = https://upload.pypi.org/legacy/
   username = __token__
   password = pypi-XXX
+
