@@ -36,8 +36,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 # Add specific OpenSSL to PATH
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-# Add Java Home
-export JAVA_HOME=$(/usr/libexec/java_home)
 
 
 ########
