@@ -91,7 +91,6 @@ brew install minikube
 brew install nmap
 brew install node
 # brew install --cask nordvpn
-bmew install nvm
 brew install opa
 brew install --cask postman
 brew install --cask pgadmin4
