@@ -54,6 +54,7 @@ brew install caddy
 brew install certstrap
 brew install --cask chatgpt
 brew install chromium
+brew install composer
 brew install csshx
 brew install --cask cursor
 brew install derailed/k9s/k9s
@@ -82,6 +83,7 @@ brew install jq
 brew install --cask keybase
 brew install kind
 brew install kubernetes-cli
+brew install localstack/tap/localstack-cli
 brew install maven
 brew install --cask microsoft-edge
 brew install --cask microsoft-teams
@@ -89,6 +91,7 @@ brew install minikube
 brew install nmap
 brew install node
 # brew install --cask nordvpn
+bmew install nvm
 brew install opa
 brew install --cask postman
 brew install --cask pgadmin4
@@ -137,6 +140,7 @@ brew install vlt
 
 brew tap mike-engel/jwt-cli
 brew install jwt-cli
+
 
 brew cleanup --force
 rm -f -r /Library/Caches/Homebrew/*
