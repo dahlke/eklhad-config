@@ -78,7 +78,6 @@ brew install helm
 brew install htop
 brew install --cask istat-menus
 brew install --cask iterm2
-brew install jenv
 brew install jq
 brew install --cask keybase
 brew install kind
@@ -473,14 +472,6 @@ Inspect available Java versions.
 ```bash
 asdf plugin-add java
 asdf list-all java
-```
-
-### `jenv`
-
-Fix any existing issues. Useful for any Java work that comes up.
-
-```bash
-jenv doctor
 ```
 
 ### `npm`
