@@ -66,6 +66,7 @@ brew install fig
 brew install gcc
 # brew install --cask gimp
 brew install gh
+brew install --cask ghostty
 brew install go
 brew install --cask google-chrome
 brew install --cask google-drive

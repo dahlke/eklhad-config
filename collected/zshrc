@@ -165,3 +165,9 @@ eval "$(omni hook init zsh)"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 # . /opt/homebrew/opt/asdf/completions/asdf.zsh
 export JAVA_HOME=$(asdf where java)
+
+########
+# temporal
+########
+eval "$(temporal completion zsh)"
+
