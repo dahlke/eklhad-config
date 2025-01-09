@@ -97,6 +97,7 @@ brew install pipx
 brew install pnpm
 brew install postgresql
 brew install python
+brew install rbenv # for managing Ruby envs
 brew install ruby
 brew install rustup # rustup-init
 brew install --cask signal
