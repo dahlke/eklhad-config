@@ -37,7 +37,7 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 # Add specific OpenSSL to PATH
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 # Add brew installed Ruby to PATH
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 
 ########
@@ -173,3 +173,7 @@ export JAVA_HOME=$(asdf where java)
 ########
 eval "$(temporal completion zsh)"
 
+########
+# ruby
+########
+export RUBYOPT="-rbundler/setup"
