@@ -50,6 +50,7 @@ brew install asdf
 brew install autojump
 brew install azure-cli
 brew install awscli
+brew install buf
 brew install caddy
 brew install certstrap
 brew install --cask chatgpt
@@ -74,6 +75,7 @@ brew install gradle
 brew install grafana
 brew install graphviz
 brew install --cask graphql-playground
+brew install grpcurl
 brew install helm
 brew install htop
 brew install --cask istat-menus
