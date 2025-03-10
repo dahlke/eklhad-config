@@ -60,6 +60,7 @@ brew install csshx
 brew install --cask cursor
 brew install derailed/k9s/k9s
 brew install --cask discord
+brew install dotnet
 # brew install eksctl
 brew install ffmpeg
 brew install fig
