@@ -41,7 +41,6 @@ brew update
 ```
 
 ### Install Commonly Used Tools and Apps via `brew`
-
 ```bash
 brew install --cask 1password
 brew install --cask 1password-cli
@@ -448,13 +447,6 @@ export GITHUB_TOKEN=$(op get item GitHub | jq -r '.details.sections[1].fields[0]
 export GITHUB_SECRET=$(op get item GitHub | jq -r '.details.sections[1].fields[1].v')
 ```
 
-#### Set Personal Twilio Creds
-
-```bash
-export TWILIO_ACCOUNT_SID=$(op get item Twilio | jq -r '.details.sections[1].fields[0].v')
-export TWILIO_AUTH_TOKEN=$(op get item Twilio | jq -r '.details.sections[1].fields[1].v')
-```
-
 #### Set Personal Terraform Cloud Creds
 
 ```bash
@@ -497,19 +489,4 @@ npx install
 ```bash
 pipx ensurepath
 sudo pipx ensurepath --global # optional to allow pipx actions with --global argument
-```
-
-### `poetry`
-
-```bash
-pipx install poetry
-pipx upgrade poetry
-pipx install virtualenv
-pipx upgrade virtualenv
-```
-
-```bash
-poetry completions zsh > ~/.zfunc/_poetry
-fpath+=~/.zfunc
-autoload -Uz compinit && compinit
 ```
