@@ -111,6 +111,7 @@ brew install --cask sublime-text
 brew install the_silver_searcher
 brew install temporal
 brew install tree
+brew install uv
 brew install --cask qflipper
 brew install watch
 brew install watchman
