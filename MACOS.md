@@ -483,6 +483,8 @@ npm install
 
 npm install -g depcheck
 npx install
+
+npm install -g @anthropic-ai/claude-code
 ```
 
 ### `pipx`
