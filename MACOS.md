@@ -41,6 +41,7 @@ brew update
 ```
 
 ### Install Commonly Used Tools and Apps via `brew`
+
 ```bash
 brew install --cask 1password
 brew install --cask 1password-cli
@@ -83,7 +84,6 @@ brew install python
 brew install --cask signal
 brew install --cask slack
 brew install socat
-brew install --cask spotify
 brew install --cask steam
 brew install --cask sublime-text
 brew install the_silver_searcher
@@ -424,15 +424,6 @@ export GOOGLE_CREDENTIALS=$(op get item "Google dahlke.io" | jq -r '.details.sec
 ```
 
 ## Other
-
-### `asdf`
-
-Inspect available Java versions.
-
-```bash
-asdf plugin-add java
-asdf list-all java
-```
 
 ### `npm`
 
