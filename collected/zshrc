@@ -98,28 +98,10 @@ gac() {
 ##########
 alias d='docker'
 
-
-##########
-# VSCode
-##########
-# alias code='code-insiders'
-
-
 ##########
 # Kubernetes
 ##########
 alias k='kubectl'
-
-
-########
-# Google
-########
-
-##########
-# HashiCorp
-##########
-export CONSUL_HELM_PATH=~/src/github.com/hashicorp/consul-helmexport PATH="/usr/local/opt/openssl/bin:$PATH"
-export PATH=/Users/neil/src/github.com/hashicorp-community/tf-helper/tfh/bin:$PATH
 
 
 ########
@@ -168,18 +150,6 @@ autoload -Uz compinit && compinit
 eval "$(omni hook init zsh)"
 
 ########
-# asdf
-########
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-# . /opt/homebrew/opt/asdf/completions/asdf.zsh
-export JAVA_HOME=$(asdf where java)
-
-########
 # temporal
 ########
 eval "$(temporal completion zsh)"
-
-########
-# ruby
-########
-export RUBYOPT="-rbundler/setup"
