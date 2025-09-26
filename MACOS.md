@@ -44,54 +44,34 @@ brew update
 ```bash
 brew install --cask 1password
 brew install --cask 1password-cli
-brew install aliyun-cli
-brew install asdf
 brew install autojump
-brew install azure-cli
 brew install awscli
-brew install buf
-brew install caddy
-brew install certstrap
 brew install --cask chatgpt
-brew install chromium
-brew install composer
 brew install csshx
 brew install --cask cursor
 brew install derailed/k9s/k9s
 brew install --cask discord
-brew install dotnet
-# brew install eksctl
 brew install ffmpeg
-brew install fig
-brew install gcc
-# brew install --cask gimp
 brew install gh
 brew install --cask ghostty
 brew install go
 brew install --cask google-chrome
 brew install --cask google-drive
+brew install --cask block-goose
 brew install gpg
-brew install gradle
 brew install grafana
 brew install graphviz
 brew install --cask graphql-playground
-brew install grpcurl
 brew install helm
 brew install htop
 brew install --cask istat-menus
 brew install --cask iterm2
 brew install jq
-brew install --cask keybase
-brew install kind
 brew install kubernetes-cli
-brew install localstack/tap/localstack-cli
-brew install maven
-brew install --cask microsoft-edge
 brew install --cask microsoft-teams
 brew install minikube
 brew install nmap
 brew install node
-# brew install --cask nordvpn
 brew install opa
 brew install --cask postman
 brew install --cask pgadmin4
@@ -100,9 +80,6 @@ brew install pnpm
 brew install poetry
 brew install postgresql
 brew install python
-brew install rbenv # for managing Ruby envs
-brew install ruby
-brew install rustup # rustup-init
 brew install --cask signal
 brew install --cask slack
 brew install socat
@@ -123,24 +100,14 @@ brew install --cask vagrant
 brew install vim
 brew install --cask virtualbox
 brew install --cask vlc
-brew install xaf/omni/omni
-# brew install yarn
 brew install --cask zoom
 
 brew tap temporalio/brew
-brew install tctl
-brew install tcld
 brew install temporalio/brew/tcld
 
 brew tap hashicorp/tap
-brew install hashicorp/tap/boundary
-brew install hashicorp/tap/consul
-brew install hashicorp/tap/nomad
-brew install hashicorp/tap/packer
 brew install hashicorp/tap/terraform
 brew install hashicorp/tap/vault
-brew install hashicorp/tap/waypoint
-brew install vlt
 
 brew tap mike-engel/jwt-cli
 brew install jwt-cli
@@ -184,9 +151,6 @@ open https://support.logi.com/hc/en-us/articles/360024361233
 
 # Magnet
 open https://apps.apple.com/us/app/magnet/id441258766?mt=12
-
-# VS Code Insiders
-open https://code.visualstudio.com/insiders/
 ```
 
 ## Log Into 1Password
@@ -196,9 +160,6 @@ Log into the 1Password UI, both work and personal vaults. This will make logging
 ```bash
 op signin my.1password.com neil.dahlke@gmail.com
 eval $(op signin my)
-
-op signin team-temporal.1password.com neil.dahlke@temporal.io
-eval $(op signin temporal)
 ```
 
 ## Log Into Chrome
