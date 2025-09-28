@@ -304,7 +304,7 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
     - App Shortcuts
       - "Messages -> Delete Conversation..." = `Shift + Command + D`
     - Screenshots
-      - Disable Save picture of screen as file
+      - Disable Save pjicture of screen as file
       - Disable Copy picture of screen to the clipboard
 - Trackpad
   - Disable: Scroll direction natural -> disable
