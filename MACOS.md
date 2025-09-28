@@ -10,6 +10,41 @@ This is the first step since it will help with syncing all of the settings that 
 xcode-select --install
 ```
 
+## Log Into Chrome
+
+This should sync all Chrome extensions that will be useful going forward (vimium, Adblock, pin, 1password and other chrome extensions, fix the extensions that actually get installed).
+
+## Log Into Gmail
+
+Logging into email will also be helpful with any future steps that require email auth or finding a vendor license, etc.
+
+## Log Into GitHub
+
+This will help with cloning any repos in the following steps.
+
+Create an SSH key for this new machine and add the output `id_rsa.pub` to [GitHub](https://github.com/settings/keys).
+
+```bash
+mkdir ~/.ssh
+cd ~/.ssh
+ssh-keygen
+```
+
+Set up the standard Git user data.
+
+```bash
+git config --global user.email neil.dahlke@gmail.com
+git config --global user.name "Neil Dahlke"
+```
+
+Create a local directory to store any cloned repos into. Download this repo, so we have a local copy going forward.
+
+```bash
+mkdir -p ~/src/github.com/dahlke
+cd ~/src/github.com/dahlke
+git clone git@github.com:dahlke/eklhad-config.git
+```
+
 ## `zsh`
 
 ### Install `zsh`
@@ -117,30 +152,7 @@ brew cleanup --force
 rm -f -r /Library/Caches/Homebrew/*
 ```
 
-### Install Any Remaining Commonly Used Tools and Apps
-
-[GCP SDK Quickstart MacOS](https://cloud.google.com/sdk/docs/quickstart-macos)
-
-_TODO: use a variable for the version. Need to log in to complete the init._
-
-```bash
-wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-darwin-x86_64.tar.gz
-tar xf google-cloud-cli-darwin-x86_64.tar.gz
-cd google-cloud-sdk/
-./install.sh
-source ~/.zshrc
-gcloud init
-cd ../
-rm -rf google-cloud-sdk-372.0.0-darwin-x86_64.tar.gz
-```
-
-Install [`golint`](https://pkg.go.dev/golang.org/x/lint/golint).
-
-```bash
-go get -u golang.org/x/lint/golint
-```
-
-## Install Commonly Used Mac Apps
+### Install Commonly Used Tools and Apps
 
 ```bash
 # Docker for Mac
@@ -162,41 +174,6 @@ op signin my.1password.com neil.dahlke@gmail.com
 eval $(op signin my)
 ```
 
-## Log Into Chrome
-
-This should sync all Chrome extensions that will be useful going forward (vimium, Adblock, pin, 1password and other chrome extensions, fix the extensions that actually get installed).
-
-## Log Into Gmail
-
-Logging into email will also be helpful with any future steps that require email auth or finding a vendor license, etc.
-
-## Log Into GitHub
-
-This will help with cloning any repos in the following steps.
-
-Create an SSH key for this new machine and add the output `id_rsa.pub` to [GitHub](https://github.com/settings/keys).
-
-```bash
-mkdir ~/.ssh
-cd ~/.ssh
-ssh-keygen
-```
-
-Set up the standard Git user data.
-
-```bash
-git config --global user.email neil.dahlke@gmail.com
-git config --global user.name "Neil Dahlke"
-```
-
-Create a local directory to store any cloned repos into. Download this repo, so we have a local copy going forward.
-
-```bash
-mkdir -p ~/src/github.com/dahlke
-cd ~/src/github.com/dahlke
-git clone git@github.com:dahlke/eklhad-config.git
-```
-
 ## `vim`
 
 ### Manage Packages for `vim` Using Vundle and Vundle packages
@@ -209,21 +186,16 @@ vim
 # :PluginInstall
 ```
 
-## VS Code
+## Cursor
 
-- [Turn on Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)
-  - Manage -> Turn on Preferences Sync
-  - Allow the preferences to sync
-
-### Allow press and hold in VSCode since I use the `vim` extension
+### Allow press and hold in Cursor since I use the `vim` extension
 
 ```bash
 # Setting to false disables the _Apple_ press and hold, allowing VSCode's to take over.
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
 ```
 
-### Install VSCode Extensions (not required if use Settings Sync)
+### Install Cursor Extensions (not required if use Settings Sync)
 
 ```bash
 # Docker
@@ -252,9 +224,6 @@ open https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vsc
 
 # MarkdownLint
 open https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
-
-# MySQL
-open https://marketplace.visualstudio.com/items?itemName=formulahendry.vscode-mysql
 
 # PostCSS
 open https://marketplace.visualstudio.com/items?itemName=csstools.postcss
