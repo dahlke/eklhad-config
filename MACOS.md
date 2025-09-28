@@ -68,7 +68,6 @@ brew install --cask graphql-playground
 brew install helm
 brew install htop
 brew install --cask istat-menus
-brew install --cask iterm2
 brew install jq
 brew install kubernetes-cli
 brew install --cask microsoft-teams
@@ -113,7 +112,6 @@ brew install hashicorp/tap/vault
 
 brew tap mike-engel/jwt-cli
 brew install jwt-cli
-
 
 brew cleanup --force
 rm -f -r /Library/Caches/Homebrew/*
@@ -305,7 +303,6 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
       - Show Desktop = `Shift + Command + \`
     - App Shortcuts
       - "Messages -> Delete Conversation..." = `Shift + Command + D`
-      - "iTerm -> Clear Buffer" = `Command + E`
     - Screenshots
       - Disable Save picture of screen as file
       - Disable Copy picture of screen to the clipboard
@@ -319,32 +316,9 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
   - Facetime
     - Disable: Play sound for notifications
 
-## iTerm2
+## Ghostty
 
-### Load the Personal Profile
-
-- iTerm
-  - Profiles
-    - Load Profile from `~/src/github.com/dahlke/eklhad-config/collected/eklhad_iterm.json`
-
-### Setup Appearance
-
-- iTerm
-  - Appearance
-    - General
-      - Theme = Dark
-      - Tab bar = Top
-      - Status bar = Top
-      - General Auto-Hide menu bar in non-native fullscreen
-
-### Setup Key Bindings
-
-- iTerm
-  - Keys
-    - Select Split Plane on Left = `Command + H`
-    - Select Split Plane on Right = `Command + L`
-    - Select Split Plane Above = `Command + K`
-    - Select Split Plane Below = `Command + J`
+Use the Ghostty config file at `./static/ghostty.config`.
 
 ## Magnet
 
