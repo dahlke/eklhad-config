@@ -143,12 +143,6 @@ export PATH="$PATH:/Users/neildahlke/.local/bin"
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
-
-########
-# omni shell integration
-########
-eval "$(omni hook init zsh)"
-
 ########
 # temporal
 ########

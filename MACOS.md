@@ -26,6 +26,8 @@ mkdir ~/.zsh
 touch ~/.zsh/config
 ```
 
+Update the `~/.zshrc` file to match `./collected/zshrc`.
+
 ## `brew`
 
 ### Install `brew`
@@ -177,6 +179,7 @@ This will help with cloning any repos in the following steps.
 Create an SSH key for this new machine and add the output `id_rsa.pub` to [GitHub](https://github.com/settings/keys).
 
 ```bash
+mkdir ~/.ssh
 cd ~/.ssh
 ssh-keygen
 ```
@@ -199,6 +202,8 @@ git clone git@github.com:dahlke/eklhad-config.git
 ## `vim`
 
 ### Manage Packages for `vim` Using Vundle and Vundle packages
+
+First, update the `~/.vimrc` file to match the collected file at `./collected/vimrc`. 
 
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -270,10 +275,10 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 ### Finder
 
-- Finder > Preferences > General > Show these items on the desktop > Hard disks
+- Finder > Settings > General > Show these items on the desktop > Hard disks
 - Finder > neil > Drag `src` directory to the sidebar
 
-## System Preferences
+## System Settings
 
 - Appearance
   - Appearance -> Auto
@@ -319,9 +324,8 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 ### Load the Personal Profile
 
 - iTerm
-  - General
-    - Preferences
-      - Load Preferences from `./collected/eklhad_iterm.json`
+  - Profiles
+    - Load Profile from `~/src/github.com/dahlke/eklhad-config/collected/eklhad_iterm.json`
 
 ### Setup Appearance
 
@@ -338,7 +342,7 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 - iTerm
   - Keys
     - Select Split Plane on Left = `Command + H`
-    - Select Split Plane on Right = `Command + H`
+    - Select Split Plane on Right = `Command + L`
     - Select Split Plane Above = `Command + K`
     - Select Split Plane Below = `Command + J`
 
