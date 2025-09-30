@@ -104,6 +104,7 @@ brew install helm
 brew install htop
 brew install --cask istat-menus
 brew install jq
+brew install jupyterlab
 brew install kubernetes-cli
 brew install --cask microsoft-teams
 brew install minikube
@@ -163,11 +164,14 @@ open https://support.logi.com/hc/en-us/articles/360024361233
 
 # Magnet
 open https://apps.apple.com/us/app/magnet/id441258766?mt=12
+
+# Brother Printer 
+open https://www.brother.com/apps/iphone/index_pc.htm
 ```
 
 ## Log Into 1Password
 
-Log into the 1Password UI, both work and personal vaults. This will make logging into things much easier. Also set up the 1Password CLI.
+Log into the 1Password UI. This will make logging into things much easier. Also set up the 1Password CLI. Example below: 
 
 ```bash
 op signin my.1password.com neil.dahlke@gmail.com
@@ -290,6 +294,8 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 Use the Ghostty config file at `./static/ghostty.config`.
 
 ## Magnet
+
+_NOTE: Once MacOS Windows supports splitting into 3rds, I don't need Magnet anymore.__
 
 - Magnet
   - Preferences
