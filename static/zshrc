@@ -14,13 +14,14 @@ export HISTCONTROL=ignorespace
 
 # Source ZSH Config
 . $ZSH/oh-my-zsh.sh
-. $HOME/.zsh/config
+# . $HOME/.zsh/config
 
 
 ########
 # PATH "magic"
 ########
 export PATH=/usr/local/sbin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
 # Put Python 3 on the path
 export PATH=$HOME/Library/Python/3.7/bin:$PATH
 # Put GoLang on the path

@@ -165,13 +165,13 @@ open https://support.logi.com/hc/en-us/articles/360024361233
 # Magnet
 open https://apps.apple.com/us/app/magnet/id441258766?mt=12
 
-# Brother Printer 
+# Brother Printer
 open https://www.brother.com/apps/iphone/index_pc.htm
 ```
 
 ## Log Into 1Password
 
-Log into the 1Password UI. This will make logging into things much easier. Also set up the 1Password CLI. Example below: 
+Log into the 1Password UI. This will make logging into things much easier. Also set up the 1Password CLI. Example below:
 
 ```bash
 op signin my.1password.com neil.dahlke@gmail.com
@@ -182,7 +182,7 @@ eval $(op signin my)
 
 ### Manage Packages for `vim` Using Vundle and Vundle packages
 
-First, update the `~/.vimrc` file to match the collected file at `./collected/vimrc`. 
+First, update the `~/.vimrc` file to match the collected file at `./collected/vimrc`.
 
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -211,9 +211,6 @@ open https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 # Go
 open https://code.visualstudio.com/docs/languages/go
 
-# GraphQL
-open https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql
-
 # HashiCorp Configuration Language
 https://marketplace.visualstudio.com/items?itemName=HashiCorp.HCL
 
@@ -228,9 +225,6 @@ open https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vsc
 
 # MarkdownLint
 open https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
-
-# PostCSS
-open https://marketplace.visualstudio.com/items?itemName=csstools.postcss
 
 # Python
 open https://marketplace.visualstudio.com/items?itemName=ms-python.python
