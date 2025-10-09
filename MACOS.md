@@ -99,10 +99,12 @@ brew install --cask block-goose
 brew install gpg
 brew install grafana
 brew install graphviz
+brew install --cask google-cloud-sdk
 brew install --cask graphql-playground
 brew install helm
 brew install htop
 brew install --cask istat-menus
+brew install --cask iterm2
 brew install jq
 brew install jupyterlab
 brew install kubernetes-cli
@@ -143,6 +145,7 @@ brew tap temporalio/brew
 brew install temporalio/brew/tcld
 
 brew tap hashicorp/tap
+brew install hashicorp/tap/packer
 brew install hashicorp/tap/terraform
 brew install hashicorp/tap/vault
 
@@ -271,7 +274,7 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
     - App Shortcuts
       - "Messages -> Delete Conversation..." = `Shift + Command + D`
     - Screenshots
-      - Disable Save pjicture of screen as file
+      - Disable Save picture of screen as file
       - Disable Copy picture of screen to the clipboard
 - Trackpad
   - Disable: Scroll direction natural -> disable
@@ -286,6 +289,37 @@ open https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 ## Ghostty
 
 Use the Ghostty config file at `./static/ghostty.config`.
+
+## iTerm2
+
+Continue using iTerm2 as well until Ghostty supports using TouchID for the 1Password CLI.
+
+### Load the Personal Profile
+
+- iTerm
+  - Profiles
+    - Load Profile from `~/src/github.com/dahlke/eklhad-config/static/eklhad_iterm.json`
+
+### Setup Appearance
+
+- iTerm
+  - Appearance
+    - General
+      - Theme = Dark
+      - Tab bar = Top
+      - Status bar = Top
+      - General Auto-Hide menu bar in non-native fullscreen
+
+### Setup Key Bindings
+
+- iTerm
+  - Keys
+    - Select Split Plane on Left = `Command + H`
+    - Select Split Plane on Right = `Command + L`
+    - Select Split Plane Above = `Command + K`
+    - Select Split Plane Below = `Command + J`
+
+
 
 ## Magnet
 
