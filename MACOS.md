@@ -110,6 +110,7 @@ brew install jupyterlab
 brew install kubernetes-cli
 brew install --cask microsoft-teams
 brew install minikube
+brew install --cask notion
 brew install nmap
 brew install node
 brew install opa
@@ -130,6 +131,7 @@ brew install temporal
 brew install tree
 brew install uv
 brew install --cask qflipper
+brew install --cask warp
 brew install watch
 brew install watchman
 brew install --cask webex
@@ -346,8 +348,6 @@ Be sure to setup [text message forwarding](https://support.apple.com/en-us/HT208
 ## iStat Menus
 
 Apply the license from email, and then enable: Notifications, CPU & CPU, Memory, Disks, Network and Battery/Power. Start on bootup.
-
--
 
 ## Removed Unused Mac Apps
 
