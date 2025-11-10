@@ -212,4 +212,3 @@ endfunction
 
 "----- Because VIM and Crontab hate each other -----"
 autocmd filetype crontab setlocal nobackup nowritebackup
-

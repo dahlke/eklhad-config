@@ -1,0 +1,91 @@
+{
+  "mappings": [
+    {
+      "name": "zshrc",
+      "repo_path": "static/zshrc",
+      "system_path": "~/.zshrc",
+      "collectable": true,
+      "applicable": true,
+      "found_on_system": true
+    },
+    {
+      "name": "vimrc",
+      "repo_path": "static/vimrc",
+      "system_path": "~/.vimrc",
+      "collectable": true,
+      "applicable": true,
+      "found_on_system": true
+    },
+    {
+      "name": "ghostty.config",
+      "repo_path": "static/ghostty.config",
+      "system_path": "~/Library/Application Support/com.mitchellh.ghostty/config",
+      "collectable": true,
+      "applicable": true,
+      "found_on_system": true
+    },
+    {
+      "name": "gitignore",
+      "repo_path": "static/gitignore",
+      "system_path": "~/.gitignore",
+      "collectable": true,
+      "applicable": true,
+      "found_on_system": true
+    },
+    {
+      "name": "pypirc",
+      "repo_path": "static/pypirc",
+      "system_path": "~/.pypirc",
+      "collectable": true,
+      "applicable": true,
+      "found_on_system": false,
+      "note": "File not found on system - will be created on apply"
+    },
+    {
+      "name": "eslintrc.json",
+      "repo_path": "static/eslintrc.json",
+      "system_path": "~/.eslintrc.json",
+      "collectable": true,
+      "applicable": true,
+      "found_on_system": false,
+      "note": "File not found on system - will be created on apply"
+    },
+    {
+      "name": "markdownlint.json",
+      "repo_path": "static/markdownlint.json",
+      "system_path": "~/.markdownlint.json",
+      "collectable": true,
+      "applicable": true,
+      "found_on_system": false,
+      "note": "File not found on system - will be created on apply"
+    },
+    {
+      "name": "secrets.op.sh",
+      "repo_path": "static/secrets.op.sh",
+      "system_path": "~/.secrets.op.sh",
+      "collectable": true,
+      "applicable": true,
+      "found_on_system": false,
+      "note": "File not found on system - will be created on apply"
+    },
+    {
+      "name": "neil_cursor.code-profile",
+      "repo_path": "static/neil_cursor.code-profile",
+      "system_path": null,
+      "collectable": false,
+      "applicable": false,
+      "found_on_system": false,
+      "note": "Cursor profiles are stored as directories with settings.json. The .code-profile file is an export format that must be imported manually through Cursor settings UI: Cursor > Settings > Profiles > Import Profile"
+    },
+    {
+      "name": "eklhad_iterm.json",
+      "repo_path": "static/eklhad_iterm.json",
+      "system_path": null,
+      "collectable": false,
+      "applicable": false,
+      "found_on_system": false,
+      "note": "iTerm2 profiles must be loaded manually through iTerm2 Preferences > Profiles > Other Actions > Import JSON Profiles"
+    }
+  ]
+}
+

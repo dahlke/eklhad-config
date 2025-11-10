@@ -148,3 +148,6 @@ autoload -Uz compinit && compinit
 # temporal
 ########
 eval "$(temporal completion zsh)"
+
+# Created by `pipx` on 2025-10-06 20:50:37
+export PATH="$PATH:/Users/neil/.local/bin"
