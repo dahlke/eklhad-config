@@ -87,7 +87,6 @@ brew install awscli
 brew install --cask chatgpt
 brew install csshx
 brew install --cask cursor
-brew install derailed/k9s/k9s
 brew install --cask discord
 brew install ffmpeg
 brew install gh
@@ -107,12 +106,16 @@ brew install --cask istat-menus
 brew install --cask iterm2
 brew install jq
 brew install jupyterlab
+brew install k9s
 brew install kubernetes-cli
+brew install --cask loom
+brew install --cask lm-studio
 brew install --cask microsoft-teams
 brew install minikube
 brew install --cask notion
 brew install nmap
 brew install node
+brew install ollama
 brew install opa
 brew install --cask postman
 brew install --cask pgadmin4
@@ -131,10 +134,10 @@ brew install temporal
 brew install tree
 brew install uv
 brew install --cask qflipper
-brew install --cask warp
 brew install watch
 brew install watchman
 brew install --cask webex
+brew install --cask whatsapp
 brew install wrk
 brew install wget
 brew install --cask vagrant
