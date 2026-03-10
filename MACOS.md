@@ -85,6 +85,8 @@ brew install --cask 1password-cli
 brew install autojump
 brew install awscli
 brew install --cask chatgpt
+brew install --cask claude-code
+brew install --cask codex
 brew install csshx
 brew install --cask cursor
 brew install --cask discord
