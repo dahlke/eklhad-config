@@ -139,6 +139,7 @@ brew install --cask qflipper
 brew install watch
 brew install watchman
 brew install --cask webex
+brew install --cask wispr-flow
 brew install --cask whatsapp
 brew install wrk
 brew install wget
