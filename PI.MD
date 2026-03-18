@@ -64,6 +64,27 @@ Then make sure that the new SSH setup works, by `exit`ing the connection to the 
 ssh rpi1 # should have no password prompt
 ```
 
+## Terraform Automation (Optional)
+
+If you want to bootstrap nodes via Terraform, use the configs in
+`terraform/rasppi` along with the scripts in `scripts/bash/rasppi`.
+
+```bash
+cd terraform/rasppi
+cp terraform.tfvars.example terraform.tfvars
+vim terraform.tfvars
+terraform init
+terraform apply
+```
+
+## Base Node Bootstrap (Optional)
+
+Run this on each Pi to install base packages and enable basic security:
+
+```bash
+./scripts/bash/rasppi/bootstrap.sh
+```
+
 ## Change Pi Hostname per Board
 
 On each board, change the hostname to represent it's number in the rack to make it easier to find later.
@@ -73,7 +94,7 @@ sudo hostnamectl set-hostname rpi1
 ...
 ```
 
-## (Optional) HashiCorp Stuff
+## Base Packages (Optional)
 
 With `csshx` installed, and your `~/.ssh/config` properly updated, run:
 
@@ -81,23 +102,36 @@ With `csshx` installed, and your `~/.ssh/config` properly updated, run:
 csshx rpi1 rpi2 rpi3 rpi4
 ```
 
-Once you are logged in to all of the boxes via `csshx`, install the relevant HashiCorp tools I want to use.
+Once you are logged in to all of the boxes via `csshx`, install a modern base
+set of tools that are useful across projects. Terraform automation is still
+recommended for provisioning (see the Terraform section above).
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y consul vault nomad waypoint boundary packer terraform
+sudo apt-get upgrade -y
+sudo apt-get install -y \
+  curl \
+  git \
+  htop \
+  jq \
+  net-tools \
+  rsync \
+  tmux \
+  ufw \
+  unzip \
+  vim \
+  wget
 ```
 
-### Install and Run Consul, Vault, Nomad, Waypoint, Boundary, Terraform, Packer
+Optional security basics:
 
-- [Consul Deployment Guide](https://learn.hashicorp.com/tutorials/consul/deployment-guide?in=consul/production-deploy)
-- [Vault Deployment Guide](https://learn.hashicorp.com/tutorials/vault/deployment-guide)
+```bash
+sudo apt-get install -y fail2ban
+sudo ufw allow OpenSSH
+sudo ufw enable
+```
 
-#### Steps:
-
-- TODO: run terraform apply and simplify this greatly
-
-# Helpful
+## Helpful
 
 ## Find Raspberry Pi IP Addresses on Home Network
 

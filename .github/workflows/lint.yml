@@ -1,0 +1,37 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y jq shellcheck
+
+      - name: Validate file mappings
+        run: ./scripts/bash/validate-mappings.sh
+
+      - name: Audit file mappings
+        run: ./scripts/bash/audit-configs.sh
+
+      - name: Check markdown links
+        run: ./scripts/bash/check-md-links.sh
+
+      - name: Check for secrets
+        run: ./scripts/bash/check-sensitive.sh
+
+      - name: Shellcheck scripts
+        run: shellcheck scripts/bash/*.sh scripts/bash/macos/*.sh scripts/bash/mcp/*.sh scripts/bash/rasppi/*.sh
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform fmt
+        working-directory: terraform/rasppi
+        run: terraform fmt -check

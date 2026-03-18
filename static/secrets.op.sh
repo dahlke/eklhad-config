@@ -17,4 +17,3 @@ export CLOUDFLARE_API_KEY=$(op get item Cloudflare | jq -r '.details.sections[1]
 
 export INSTAGRAM_ACCESS_TOKEN=$(op get item Instagram | jq -r '.details.sections[1].fields[0].v')
 
-export TFC_TOKEN=$(op get item "Terraform Cloud" | jq -r '.details.sections[1].fields[0].v')

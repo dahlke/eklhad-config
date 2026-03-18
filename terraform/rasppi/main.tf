@@ -14,7 +14,6 @@ resource "null_resource" "rpi_setup_all" {
   provisioner "remote-exec" {
     inline = [
       "mkdir -p /home/ubuntu/scripts/",
-      "mkdir -p /home/ubuntu/scripts/consul"
     ]
   }
 
@@ -23,39 +22,10 @@ resource "null_resource" "rpi_setup_all" {
     destination = "/home/ubuntu/scripts/install.sh"
   }
 
-  provisioner "file" {
-    source      = "../../scripts/bash/rasppi/consul/setup_basics.sh"
-    destination = "/home/ubuntu/scripts/consul/setup_basics.sh"
-  }
-
   provisioner "remote-exec" {
     inline = [
       "chmod 755 scripts/*.sh",
-      "chmod 755 scripts/**/*.sh",
       "./scripts/install.sh",
-      "./scripts/consul/setup_basics.sh",
-    ]
-  }
-}
-
-resource "null_resource" "rpi_setup_leader" {
-  connection {
-    type = "ssh"
-    # TODO: figure out if I can use the hostnames from ssh/config
-    user = var.rpi_username
-    host = var.rpi_leader_address
-    private_key = file("${var.rpi_ssh_priv_key_path}")
-  }
-
-  provisioner "file" {
-    source      = "../../scripts/bash/rasppi/consul/setup_leader.sh"
-    destination = "/home/ubuntu/scripts/consul/setup_leader.sh"
-  }
-
-  provisioner "remote-exec" {
-    inline = [
-      "chmod 755 scripts/**/*.sh",
-      "./scripts/consul/setup_leader.sh",
     ]
   }
 }

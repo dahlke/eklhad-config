@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+"$REPO_ROOT/scripts/bash/check-macos-brewfile.sh"
+"$REPO_ROOT/scripts/bash/cursor/export-extensions.sh"
+"$REPO_ROOT/scripts/bash/cursor/export-settings.sh"
+"$REPO_ROOT/scripts/bash/check-sensitive.sh"
