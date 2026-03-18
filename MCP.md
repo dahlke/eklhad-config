@@ -14,6 +14,7 @@ Required env vars for the scripts:
 - `GTM_AGENT_TENANT_ID`
 - `SLACK_BOT_TOKEN`
 - `SLACK_TEAM_ID`
+- `GITHUB_TOKEN`
 
 ## Claude CLI
 
@@ -49,6 +50,9 @@ claude mcp add slack \
   -e SLACK_BOT_TOKEN=XXX \
   -e SLACK_TEAM_ID=XXX \
   --scope local
+
+claude mcp add-json github \
+  "{\"type\":\"http\",\"url\":\"https://api.githubcopilot.com/mcp\",\"headers\":{\"Authorization\":\"Bearer XXX\"}}"
 ```
 
 ## Codex (CLI + IDE)
@@ -81,9 +85,9 @@ If you want to only generate the config file:
 Deep Agents may prompt to trust project-level stdio servers. If you want to
 skip prompts in automation, run `deepagents --trust-project-mcp`.
 
-## github (todo)
+## github
 
 ```bash
 claude mcp add-json github \
-  '{"type":"http","url":"https://api.githubcopilot.com/mcp","headers":{"Authorization":"Bearer "}}'
+  "{\"type\":\"http\",\"url\":\"https://api.githubcopilot.com/mcp\",\"headers\":{\"Authorization\":\"Bearer XXX\"}}"
 ```

@@ -25,6 +25,7 @@ require_env GTM_AGENT_API_KEY
 require_env GTM_AGENT_TENANT_ID
 require_env SLACK_BOT_TOKEN
 require_env SLACK_TEAM_ID
+require_env GITHUB_TOKEN
 
 claude mcp add --transport http gtm-agent \
   https://gtm-agent-b8803b32b08057d4968c5f671d7e0149.us.langgraph.app/mcp \
@@ -49,5 +50,8 @@ claude mcp add slack \
   -e SLACK_BOT_TOKEN="${SLACK_BOT_TOKEN}" \
   -e SLACK_TEAM_ID="${SLACK_TEAM_ID}" \
   --scope local
+
+claude mcp add-json github \
+  "{\"type\":\"http\",\"url\":\"https://api.githubcopilot.com/mcp\",\"headers\":{\"Authorization\":\"Bearer ${GITHUB_TOKEN}\"}}"
 
 echo "Claude MCP setup complete."

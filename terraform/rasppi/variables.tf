@@ -1,5 +1,5 @@
 variable "rpi_addresses" {
-  type = map
+  type = map(any)
 }
 
 variable "rpi_leader_address" {
@@ -7,7 +7,7 @@ variable "rpi_leader_address" {
 }
 
 variable "rpi_follower_addresses" {
-  type = map
+  type = map(any)
 }
 
 variable "rpi_username" {

@@ -6,8 +6,8 @@ resource "null_resource" "rpi_setup_all" {
   connection {
     type = "ssh"
     # TODO: figure out if I can use the hostnames from ssh/config
-    user = var.rpi_username
-    host = each.value
+    user        = var.rpi_username
+    host        = each.value
     private_key = file("${var.rpi_ssh_priv_key_path}")
   }
 

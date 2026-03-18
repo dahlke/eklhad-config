@@ -39,7 +39,11 @@ url = "https://app.hex.tech/mcp"
 command = "npx"
 args = ["-y", "@modelcontextprotocol/server-slack"]
 env_vars = ["SLACK_BOT_TOKEN", "SLACK_TEAM_ID"]
+
+[mcp_servers.github]
+url = "https://api.githubcopilot.com/mcp"
+bearer_token_env_var = "GITHUB_TOKEN"
 EOF
 
 echo "Wrote Codex MCP config to $CONFIG_PATH"
-echo "Tip: set GTM_AGENT_API_KEY, GTM_AGENT_TENANT_ID, SLACK_BOT_TOKEN, SLACK_TEAM_ID in your shell."
+echo "Tip: set GTM_AGENT_API_KEY, GTM_AGENT_TENANT_ID, SLACK_BOT_TOKEN, SLACK_TEAM_ID, GITHUB_TOKEN in your shell."
