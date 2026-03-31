@@ -7,6 +7,14 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 CONFIG_PATH="${CODEX_CONFIG_PATH:-$REPO_ROOT/.codex/config.toml}"
+ENV_FILE="${ENV_FILE:-$REPO_ROOT/.env}"
+
+if [ -f "$ENV_FILE" ]; then
+    set -a
+    # shellcheck source=/dev/null
+    . "$ENV_FILE"
+    set +a
+fi
 
 if ! command -v codex >/dev/null 2>&1; then
     echo "Missing required command: codex"

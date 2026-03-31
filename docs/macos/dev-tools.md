@@ -30,6 +30,14 @@ vim
 # :PluginInstall
 ```
 
+## `ripgrep`
+
+Used by Deep Agents and other tooling. Installed via `Brewfile` or:
+
+```bash
+brew install ripgrep
+```
+
 ## Cursor
 
 ### Settings Sync (recommended)
